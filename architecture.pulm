@@ -1,0 +1,35 @@
+@startuml
+title System Architecture – JMS to EFS to S3 Batching Flow
+
+actor Scheduler
+actor Producer
+
+package "Messaging Layer" {
+  [JMS Queue]
+  Producer --> [JMS Queue] : Send XML + EOF messages
+  Scheduler --> [JMS Queue] : Scheduled EOF message
+}
+
+package "Processing Application (in POD)" {
+  [Apache Camel Route] --> [XML Processor] : Transform XML → CSV row
+  [Apache Camel Route] --> [Exception Handler] : On error
+  [Apache Camel Route] --> [Batch Validator] : Track counts
+  [Apache Camel Route] --> [EOF Handler] : On EOF
+
+  [XML Processor] --> [EFS: /working] : Append CSV row
+  [Exception Handler] --> [EFS: /exception] : Save message + stack trace
+  [EOF Handler] --> [EFS: /output] : Move + rename file
+}
+
+package "Storage Layer" {
+  [EFS: /working]
+  [EFS: /output]
+  [EFS: /exception]
+}
+
+package "Archival" {
+  [S3 Bucket]
+  [EFS: /output] --> [S3 Bucket] : Finalized file upload
+}
+
+@enduml
