@@ -1,5 +1,18 @@
 # Design and Implementation Overview: Batching JMS Messages to Files
 
+## 🧭 Project Navigation Legend
+
+This table provides a quick reference across all repositories in the outbound messaging solution. Use it to understand each component’s role and navigate between them easily.
+
+| Repository            | Description                                  | Status             |
+|-----------------------|----------------------------------------------|--------------------|
+| [outbound-adapter](https://github.com/your-org/outbound-adapter)           | Main entry point that orchestrates all outbound flow. | 🟢 **You are here**  |
+| [outbound-requirements](https://github.com/your-org/outbound-requirements) | Functional and technical requirements documentation. | 📄 Requirements         |
+| [outbound-scheduler](https://github.com/your-org/outbound-scheduler)       | Publishes EOF signals to trigger batch finalization. | ⏰ Scheduler         |
+| [outbound-processor](https://github.com/your-org/outbound-processor)       | Transforms and writes JMS messages to files.         | 🛠️ Processor  |
+
+> 🔗 **Tip**: Use this table from any repo to find your way back to the main flow or explore related modules.
+
 ## Problem Statement - Tibco Outbound File Adapter
 
 The following Figure depicts the current Outbound Direct FTP file processing pattern.
