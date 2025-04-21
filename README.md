@@ -12,8 +12,9 @@ This table provides a quick reference across all repositories in the outbound me
 | [outbound-processor](https://github.com/sipcic/outbound-processor)       | Transforms and writes JMS messages to files.         | 🛠️ Processor  |
 
 > 🔗 **Tip**: Use this table from any repo to find your way back to the main flow or explore related modules.
+
 ---
----
+
 ## Problem Statement - Tibco Outbound File Adapter
 
 The following Figure depicts the current Outbound Direct FTP file processing pattern.
