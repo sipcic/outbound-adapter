@@ -23,7 +23,7 @@ Based on the predefined schedule, the Tibco Scheduler publishes the EOF record t
 
 8. Upon the completion of the move, the Adapter opens the new instance of the File in the Working Directory, and the process repeats.
 
-## Camel Outbound Adaapeter - High-Level Overview
+## Camel Outbound Adapeter - High-Level Overview
 
 This document outlines the design and implementation approach for a batch processing system that ingests JMS messages, transforms them into CSV records, writes them to a file on a shared NFS mount, and transfers the finalized batch to an S3 bucket. The architecture ensures message order, transactional integrity, and seamless batch rotation using EOF signaling.
 
@@ -110,15 +110,15 @@ While Amazon S3 is ideal for durable storage and downstream analytics, **Amazon 
 The following resources provide detailed design and implementation documentation for key components of the system:
 
 - **Requirements Document**  
-  [View Requirements](../outbound-requirements/)  
+  [View Requirements](https://github.com/sipcic/outbound-requirements)  
   Describes functional and non-functional requirements, system behavior, and message formats.
 
 - **Camel Scheduler (EOF Publisher)**  
-  [View Camel Scheduler](../outbound-eof-scheduler-artemis/README-Scheduler.md)  
+  [View Camel Scheduler](https://github.com/sipcic/outbound-scheduler)  
   Explains the scheduled route responsible for publishing EOF messages to the JMS queue at defined intervals.
 
 - **Camel Outbound Adapter**  
-  [View Camel Outbound Adapter](../outbound-recovered-with-exceptios-and-validation/README.md)  
+  [View Camel Outbound Adapter](../https://github.com/sipcic/outbound-processor)  
   Describes the Apache Camel route and logic that consumes messages from the JMS queue, performs transformation, batching, rotation, and uploads completed batches to Amazon S3.
   
   ## Additional Features
