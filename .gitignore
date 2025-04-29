@@ -1,0 +1,89 @@
+# === Java / Maven / Gradle ===
+/target/
+/build/
+/out/
+/.gradle/
+/.mvn/
+!gradle-wrapper.jar
+
+# === IntelliJ IDEA ===
+*.iml
+.idea/
+*.iws
+*.ipr
+
+# === Eclipse ===
+.project
+.classpath
+.settings/
+
+# === VS Code ===
+.vscode/
+
+# === Logs ===
+*.log
+logs/
+*.tmp
+
+# === OS Files ===
+.DS_Store
+Thumbs.db
+
+# === Node / NPM (if using any frontend or Helm preview tools) ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# === Kubernetes & Helm ===
+*.tgz
+charts/**/charts/
+charts/**/tmp/
+charts/**/.helmignore
+helm-docs.md
+
+# === Configuration Artifacts ===
+*.env
+.env.*
+config/*.local.*
+*.local.yaml
+
+# === Secrets ===
+secrets.yaml
+secret-values.yaml
+*.secret
+*.crt
+*.key
+*.pem
+
+# === Compiled files ===
+*.class
+
+# === Docker ===
+*.tar
+*.bak
+*.swp
+
+# === Documentation / Output ===
+/*.md.html
+/docs/_site/
+/docs/public/
+
+# === Test & Coverage ===
+coverage/
+*.lcov
+.jacoco/
+*.exec
+
+# === Microsoft Office Temporary Files ===
+~$*
+
+# === Miscellaneous ===
+*.bak
+*.tmp
+*.swp
+*.swo
+*.orig
+
+# === Archive Folder ===
+/Archive/

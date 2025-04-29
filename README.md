@@ -1,148 +1,286 @@
-# Design and Implementation Overview: Batching JMS Messages to Files
+## Table of Contents
 
-## 🧭 Project Navigation Legend
+1. [Outbound File Adapter](#1-outbound-file-adapter)
+2. [Problem Statement - Tibco Outbound File Adapter](#2-problem-statement---tibco-outbound-file-adapter)
+   - [2.1 Adapter Architecture](#21-adapter-architecture)
+   - [2.2 Adapter Files and EMS Queues](#22-adapter-files-and-ems-queues)
+3. [Camel File Adapter – Reference Implementation](#3-camel-file-adapter---reference-implementation)
+   - [3.1 Architecture](#31-architecture)
+   - [3.2 Repository References](#32-repository-references)
+   - [3.3 Component Overview](#33-component-overview)
+     - [3.3.1 Scheduler](#331-scheduler)
+     - [3.3.2 Processor](#332-processor)
+       - [3.3.2.1 Messaging Layer](#3321-messaging-layer)
+       - [3.3.2.2 Processing Application (Single Local Processor)](#3322-processing-application-single-local-processor)
+       - [3.3.2.3Storage Layer (Local File System)](#3323storage-layer-local-file-system)
+       - [3.3.2.4 Archival](#3324-archival)
+4. [Deploying Reference Implementation to Production](#4-deploying-reference-implementation-to-production)
+   - [4.1 Architecture](#41-architecture)
+   - [4.2 Changes](#42-changes)
+     - [4.2.1 Updates to Scheduler (Camel Scheduler POD)](#421-updates-to-scheduler-camel-scheduler-pod)
+     - [4.2.2 Changes to Processor (Camel Processor POD)](#422-changes-to-processor-camel-processor-pod)
+     - [4.2.3 EFS Configuration (Shared Storage Layer)](#423-efs-configuration-shared-storage-layer)
+     - [4.2.4 Changes to Kubernetes `CronJob Scheduler`](#424-changes-to-kubernetes-cronjob-scheduler)
+   - [4.3 Packaging and Deployment](#43-packaging-and-deployment)
+     - [4.3.1 Deployment Strategies: 8×3 Model (Per-File Per-Component Deployment)](#431-deployment-strategies-8×3-model-per-file-per-component-deployment)
+     - [4.3.2 Deployment Optimization: Shared Scheduler and CronJob (8+2 Model)](#432-deployment-optimization-shared-scheduler-and-cronjob-82-model)
 
-This table provides a quick reference across all repositories in the outbound messaging solution. Use it to understand each component’s role and navigate between them easily.
 
-| Repository            | Description                                  | Status             |
-|-----------------------|----------------------------------------------|--------------------|
-| [outbound-adapter](https://github.com/sipcic/outbound-adapter)           | Main entry point that orchestrates all outbound flow. | 🟢 **You are here**  |
-| [outbound-requirements](https://github.com/sipcic/outbound-requirements) | Functional and technical requirements documentation. | 📄 Requirements         |
-| [outbound-scheduler](https://github.com/sipcic/outbound-scheduler)       | Publishes EOF signals to trigger batch finalization. | ⏰ Scheduler         |
-| [outbound-processor](https://github.com/sipcic/outbound-processor)       | Transforms and writes JMS messages to files.         | 🛠️ Processor  |
+# 1. Outbound File Adapter 
 
-> 🔗 **Tip**: Use this table from any repo to find your way back to the main flow or explore related modules.
+This document consolidates the design and evolution of the Outbound File Adapter replacement initiative. It introduces the current Tibco outbound file adapter solution, outlines the reference implementation based on Apache Camel, and documents the final production-grade implementation, highlighting the necessary architectural and deployment changes.
+
+# 2. Problem Statement - Tibco Outbound File Adapter
+
+## 2.1 Adapter Architecture
+
+The existing Tibco Outbound File Adapter architecture is depicted in the following figure.
+
+![Tibco Outbound Adapter](images/tibco-outbound-adapter.png)
+
+*Figure 1: Tibco Outbound File Adapter*
+
+The Tibco Outbound File Adapter implements a structured batching process, summarized in the following key steps:
+
+1. **Message Publishing:**
+Tibco source processes (UPM/UCM) transform business records into XML format and publish them to the JMS Adapter Queue.
+2. **File Writing:**
+The Tibco File Adapter continuously listens to the JMS Adapter Queue, reads the incoming XML records, transforms them into positional or delimited format, and appends them sequentially to a working file in the Solaris Working Directory.
+3. **Batch Closure:**
+Based on a predefined schedule, the Tibco Scheduler publishes a special EOF (End-of-File) record to the JMS Adapter Queue. Upon encountering the EOF, the File Adapter finalizes the working file by closing it properly for writing.
+4. **File Movement and Archival:**
+After closing the file, the File Adapter’s post-processing script moves the finalized file from the Working Directory to the Output Directory without altering the filename. Simultaneously, a copy of the finalized file is archived with a timestamp appended to its name for historical record-keeping.
+5. **Continuation:**
+Once the move and archival are complete, the File Adapter initializes a new working file in the Solaris Working Directory, ready to receive the next batch of incoming records. This process then continues cyclically.
+
+## 2.2 Adapter Files and EMS Queues
+
+The following tables document the batch files processed by the Tibco EMS File Adapter, including their sources, targets, file types, and additional relevant information.
 
 ---
+| Interface Name                | Source | Target       | File Type  | File Name         | Type     | Count |
+|-------------------------------|--------|--------------|------------|--------------------|----------|-------|
+| Demographic Publish - Contact | UPM    | HOST/Insight | Positional | FinAcctCustPubLse.dat <br> FinAcctCustPubRet.dat <br> UCM_InSight_CustUpdate.txt    | Outbound | TBD      |
+| Demographic Publish - Account | UPM    | HOST/Insight | Positional | FinAcctCustPubLse.dat <br>FinAcctCustPubRet.dat; UCM_InSight_CustUpdate.txt     | Outbound |    TBD   |
+| Privacy Publish - Lease       | UPM    | HOST/Insight | Positional | ooacctl.dat <br> UCM_InSight_Priv.txt                                                        | Outbound |   TBD    |
+| Privacy Publish - Retail      | UPM    | HOST/Insight | Positional | ooacctr.dat <br> UCM_InSight_Priv.txt                                                        | Outbound |   TBD    |
+| Insight Comments              | SFDC   | Insight      | Delimited  | T_SIEBEL_NOTES.dat      | Outbound |   TBD    |
+| Click 2 Dial Comments         | SFDC   | Insight      | Delimited  | SF_ClickToDial_INS_COMMENTS.dat | Outbound |   TBD    |
+---
+*Table - Batch Interfaces*
 
-## Problem Statement - Tibco Outbound File Adapter
+**Note:** There are eight distinct files involved, summarized below along with their corresponding Tibco EMS Queue Names.
 
-The following Figure depicts the current Outbound Direct FTP file processing pattern.
+---
+| #  | File Name                        | File Adapter Queue Name                           |
+|----|----------------------------------|---------------------------------------------------|
+| 1  | FinAcctCustPubLse.dat           | TFS.CLM.FCS.CUSTPUBLSE.V1_0.IN                    |
+| 2  | FinAcctCustPubRet.dat           | TFS.CLM.FCS.CUSTPUBRET.V1_0.IN                    |
+| 3  | UCM_InSight_CustUpdate.txt      | TFS.CLM.INST.CUSTOMER_PUBLISH.V1_0.IN            |
+| 4  | ooacctl.dat                     | TFS.CLM.FCS.FINACCTPRIVACYUPDATESRETL.V1_0.IN    |
+| 5  | UCM_InSight_Priv.txt            | TFS.CLM.INST.PRIVACY_UPDATES.V1_0.IN             |
+| 6  | ooacctr.dat                     | TFS.CLM.FCS.FINACCTPRIVACYUPDATESRETL.V1_0.IN    |
+| 7  | T_SIEBEL_NOTES.dat              | TFS.CRM.DWH.INST_COMMENTS.V1_0.IN                |
+| 8  | SF_ClickToDial_INS_COMMENTS.dat | TFS.CRM.DWH.INST_CLICK2DIAL_COMMENTS.V1_0.IN     |
+---
+*Table: Files and Tibco EMS Queues*
 
-![](tibco-outbound-adapter.png)
 
-The processing steps include:
+# 3. Camel File Adapter - Reference Implementation
 
-1. The Tibco source process transforms JMS XML records to target XML and publishes them to the JMS Adapter Queue.
+## 3.1 Architecture
 
-2. The Tibco File Adapter continuously reads the records, transforms them to positional format, and appends them to the File in the Solaris Working DIR.
+This section presents the design and implementation of a **Spring Boot + Apache Camel** application that ingests messages from a JMS queue, transforms them into CSV format, and writes them to a file.
 
-4. The File Adapter preserves the sequence of records from the Adapter Queue.
-Based on the predefined schedule, the Tibco Scheduler publishes the EOF record to the JMS Adapter Queue.
+The reference implementation is designed to replace the legacy **Tibco Outbound File Adapter** by ensuring that all critical requirements are met, including:
 
-5. Once the Adapter encounters the EOF record, it closes the File for writing.
+ - Transactional safety
+ - Ordered record writing
+ - Batch closure upon EOF
+ - Exception handling
+ - Restartable operation
+ - Count validation for message integrity
 
-6. The Adapter's postprocessing script moves the File to the Solaris Output Directory, maintaining the File name.
+The reference implementation leverages **locally installed components**, including an embedded ActiveMQ broker and a local file system folder structure, as depicted in the following figure.
 
-7. The Adapter's script also copies the File to the Archive Directory with the date timestamp appended.
+![](images/reference-implementation.png)
+<br>*Figure: Camel Outbound File Adapter – Reference Implementation*
 
-8. Upon the completion of the move, the Adapter opens the new instance of the File in the Working Directory, and the process repeats.
+Apache Camel orchestrates routing, transformation, and fault tolerance, while Spring Boot provides the runtime infrastructure and configuration management.
 
-## Camel Outbound Adapeter - High-Level Overview
+## 3.2 Repository References
 
-This document outlines the design and implementation approach for a batch processing system that ingests JMS messages, transforms them into CSV records, writes them to a file on a shared NFS mount, and transfers the finalized batch to an S3 bucket. The architecture ensures message order, transactional integrity, and seamless batch rotation using EOF signaling.
+The components of the reference design and implementation are detailed across the following repositories:
 
-![Sequence Diagram](out/architecture/architecture.png)
+---
+| Repository           | Description                                               | Status         |
+|----------------------|-----------------------------------------------------------|----------------|
+| outbound-adapter     | Main entry point that orchestrates all outbound flow.     | 🟢 Start here   |
+| outbound-requirements| Functional and technical requirements documentation.      | 📄 Requirements |
+| outbound-scheduler   | Publishes EOF signals to trigger batch finalization.      | ⏰ Scheduler    |
+| outbound-processor   | Transforms and writes JMS messages to files.              | 🛠️ Processor    |
+---
+**Tip:** Use this table from any repo to find your way back to the main flow or explore related modules.
 
-## Message Ingestion
+## 3.3 Component Overview
 
-The application continuously listens to a JMS queue for incoming XML messages. These messages are assumed to follow a flat schema defined by the external `descriptor.json` file. Each message is processed within a transactional Camel route, ensuring that:
+The Camel reference implementation replicates and enhances the Tibco Adapter's key responsibilities through two primary components: `Scheduler` and `Processor`.
 
-- The message is acknowledged **only after** successful transformation and persistence.
-- Errors during transformation are captured and logged in a structured exception file.
+### 3.3.1 Scheduler
 
-## Batching and EOF Handling
+The `EofPublisherRoute` component is a Camel route that uses the Apache Camel **Timer component** to periodically (hardcoded - every 60 seconds) generate and publish an `EOF` (End-of-File) XML marker to the `input.queue` on `ActiveMQ,` signaling the batch closure event for downstream processing.
 
-The system operates in a rolling batching mode, where messages are streamed into an appendable file until an EOF (end-of-file) signal is received. The EOF message is a special JMS message with a flag indicating that the current batch should be finalized.
+### 3.3.2 Processor
 
-A **scheduler** is responsible for publishing EOF messages at a regular interval (e.g., once per day or after N messages). This ensures that batching is time- or size-bound.
+The Reference Implementation consolidates all processing into a **single application deployed on a local machine**. It replaces the Tibco File Adapter by handling message transformation, batching, validation, and error logging using a Spring Boot and Apache Camel application.
 
-Upon receiving an EOF:
-- The working file is closed.
-- A timestamp is appended to the filename.
-- The file is moved from the `working/` directory to the `output/` directory on the same NFS mount.
+![](out/architecture-mac/architecture-mac.png)
+<br>*Figure: Camel Outbound File Adapter Architecture*
 
-## Use of NFS Shared Folders
+The following section offers a brief overview of the components; refer to the associated repositories for detailed implementation information.
 
-Amazon EFS (or another NFS-compatible shared volume) is used to persist intermediate and final output:
+#### 3.3.2.1 Messaging Layer
 
-- `/working` — location where `working.csv` is incrementally appended to.
-- `/output` — finalized files are moved here after EOF is processed.
-- `/exception` — if a message cannot be processed, the original message and stack trace are written as a JSON file to this directory.
+ - **JMS Queue:** Acts as the inbound message buffer.
 
-This use of NFS allows for:
-- Stateful recovery across restarts.
-- External access to files for reconciliation or monitoring.
-- Multi-pod support if scaled horizontally.
+    - **Producer** sends regular XML messages to the queue.
+    - **Scheduler** sends scheduled EOF (End-of-File) markers to the same queue to trigger batch finalization.
 
-## Copying Final Output to S3
+#### 3.3.2.2 Processing Application (Single Local Processor)
 
-After a batch is rotated (i.e., EOF processed and file moved to `/output`), a secondary step copies the finalized CSV file to an S3 bucket for archival, downstream analytics, or data lake ingestion.
+ - **Apache Camel Route:** Orchestrates the end-to-end flow, coordinating message transformation, validation, error handling, and batch rotation.
 
-This transfer is performed using the AWS SDK or CLI:
-```bash
-aws s3 cp /output/output_20240421T235500.csv s3://my-bucket/batches/
-```
-Or programmatically using:
-```java
-s3Client.putObject(PutObjectRequest.builder()
-    .bucket("my-bucket")
-    .key("batches/output_20240421T235500.csv")
-    .build(),
-    RequestBody.fromFile(Paths.get("/output/output_20240421T235500.csv")));
-```
+ - **XML Processor:** Transforms incoming XML messages into CSV rows according to a predefined mapping.
+ - **Exception Handler:** Captures transformation or processing failures and logs the original message along with the stack trace into a structured JSON file.
+ - **Batch Validator:** Tracks the number of successfully processed messages, ensuring message integrity by comparing counts at EOF.
+ - **EOF Handler:** Detects EOF signals, closes the current working file, moves it to the output directory with a timestamped name, and triggers final validation.
 
-Once copied, the original file may be:
-- Retained in EFS for N days.
-- Automatically cleaned up via a lifecycle policy.
+#### 3.3.2.3Storage Layer (Local File System)
 
-## Why Use EFS Instead of S3 for Working and Output Files
+ - **Working File** (`/working`): Open file where transformed CSV rows are appended during batch processing.
+ - **Exception File** (`/exception`): Directory where failed messages and error details are stored.
+ - **Output File** (`/output`): Directory where finalized, timestamped batch files are moved after successful batch closure.
 
-While Amazon S3 is ideal for durable storage and downstream analytics, **Amazon EFS is better suited for active batching workflows** due to its file-system semantics and real-time write performance.
+#### 3.3.2.4 Archival
 
-### EFS vs. S3: Practical Comparison
+ - S3 Bucket (Planned, Not Implemented in the Reference Implementation): <br>
+Placeholder for future functionality where finalized output files will be uploaded to Amazon S3.
 
-| Feature                        | Amazon EFS ✅        | Amazon S3 ❌                         |
-|-------------------------------|----------------------|-------------------------------------|
-| Append to existing file       | ✅ Supported          | ❌ Not supported (requires full object rewrite) |
-| File rename/move operations   | ✅ Native POSIX       | ❌ Requires copy/delete logic       |
-| Low-latency small writes      | ✅ Millisecond-scale  | ❌ Higher latency (upload-based)    |
-| Real-time visibility          | ✅ Immediate          | ❌ Not available until upload completes |
-| Seamless Camel integration    | ✅ No code changes    | ❌ Requires S3 SDK or Camel AWS component |
-| Shared access (multi-pod/MFT) | ✅ Supported          | 🔄 Requires API-based access or S3 mounting tools |
+# 4 Deploying Reference Implementation to Production
 
-### Why EFS Is Used in This Architecture
+## 4.1 Architecture
 
-- **Incremental Batching:** Allows appending each message as a CSV row without re-uploading files.
-- **Stateful Recovery:** Files remain accessible after crashes or restarts.
-- **Tool Compatibility:** External tools (e.g., MFT) can access files directly via NFS.
-- **Simplified Logic:** Works with Camel’s native file component, no need for S3-aware routing.
+The Camel Outbound File Adapter reference implementation, illustrated in the reference architecture figures, demonstrates transactional batching of JMS messages into files using a single, local application instance. Building on this foundation, the production deployment — depicted in the production architecture figures — **adopts a one-pipeline-per-file model** across Kubernetes PODs, while preserving key design principles such as transactional safety, batch integrity, and single-POD Processor deployment for message order. 
 
-> ✅ **EFS is used for real-time batching**, while **S3 is reserved for finalized file archival**.
+![](images/final-implementation.png)
+<br>*Figure: Production Camel Outbound Adapter Architecture (High-Level View)
 
-## 📚 Documentation References
+![](out/architecture-final/architecture-final.png)
+<br>*Figure: Production Camel Outbound Adapter Architecture (Component View)*
 
-The following resources provide detailed design and implementation documentation for key components of the system:
+The following sections outline the detailed changes required across `Scheduler`, `Processor`, `EFS Storage`, C`ronJob Scheduler`, and Deployment Strategies to achieve this production-ready architecture.
 
-- **Requirements Document**  
-  [View Requirements](https://github.com/sipcic/outbound-requirements)  
-  Describes functional and non-functional requirements, system behavior, and message formats.
+## 4.2 Changes
 
-- **Camel Scheduler (EOF Publisher)**  
-  [View Camel Scheduler](https://github.com/sipcic/outbound-scheduler)  
-  Explains the scheduled route responsible for publishing EOF messages to the JMS queue at defined intervals.
+### 4.2.1 Updates to Scheduler (Camel Scheduler POD)
+---
+| Area                  | Changes |
+|------------------------|---------|
+| Timer Configuration    | Replace the hardcoded 60-second Camel Timer with a descriptor-based configuration (`closure_time` and `schedule`). Scheduler must be configurable for different files and run times. |
+| Runtime Trigger        | Scheduler should trigger EOF based on day/time (cron) expressions rather than simple timer intervals. |
+| Dynamic Configuration  | Each Scheduler deployment reads its file-specific `descriptor.json`, specifying `<closure_time>` and `<schedule>` parameters. |
+| Deployment             | Separate Scheduler POD for each batch file, parameterized by file-specific schedule. |
+---
 
-- **Camel Outbound Adapter**  
-  [View Camel Outbound Adapter](../https://github.com/sipcic/outbound-processor)  
-  Describes the Apache Camel route and logic that consumes messages from the JMS queue, performs transformation, batching, rotation, and uploads completed batches to Amazon S3.
-  
-  ## Additional Features
+<br> 
 
-- **Validation:** Message counters verify that the number of received XML messages matches the number of written CSV records.
-- **Exception Handling:** Any processing error results in a structured error file saved in `/exception/`.
-- **Configurability:** Field mappings, delimiter, and paths are externalized via `descriptor.json` and application properties.
+### 4.2.2 Changes to Processor (Camel Processor POD)
 
-## Summary
+---
+| Area                  | Changes |
+|------------------------|---------|
+| File Destination       | Replace local Mac folders with Amazon EFS mounts in Kubernetes. Processor writes directly into mounted EFS under `/working`, `/output`, and `/exception` directories. |
+| Descriptor Usage       | Processor must dynamically load the `descriptor.json` at runtime, specifying `<mnt_point>`, `<file_name>`, and `<type>` (csv or positional). |
+| Error Handling         | Structured error files must be written to `/exception` on EFS, and a retry or manual intervention process must be defined for failed messages. |
+| Transactionality       | Processor must ensure EFS writes are atomic and durable across potential pod restarts (POSIX EFS compliance guarantees atomic renames). |
+| Deployment             | Each batch file will have a dedicated Processor POD, separately deployed but using the same code base. |
+| Scaling Strategy       | Single-threaded per file instance (one active Processor per file), allowing safe parallelism across different files. |
+---
 
-This design ensures scalable, fault-tolerant, and traceable batching of JMS messages using Apache Camel, NFS for intermediate file handling, and S3 for durable, long-term storage. It balances performance (via NFS) with cloud-native extensibility (via S3).
+<br>
 
+### 4.2.3 EFS Configuration (Shared Storage Layer)
+
+---
+| Area                  | Changes |
+|------------------------|---------|
+| File Organization      | Create a dedicated folder structure for each file under a shared EFS mount: `<mnt_point>/working`, `<mnt_point>/output`, and `<mnt_point>/exception`. |
+| Access Control         | Use Kubernetes PersistentVolume (PV) and PersistentVolumeClaim (PVC) mapped to the same EFS filesystem, but different `subPath`s for each Processor. |
+| State Persistence      | Because EFS persists across pod restarts, no extra local backup is needed for crash recovery. Interrupted files remain intact in `/working`. |
+| Performance Considerations | Enable EFS Performance Mode as “MaxIO” if high concurrency is expected across multiple files. |
+---
+
+<br>
+
+### 4.2.4 Changes to  Kubernetes `CronJob Scheduler`
+
+---
+| Area                  | Changes |
+|------------------------|---------|
+| Triggering             | Create a Kubernetes CronJob that triggers shortly after the expected EOF and file rotation (e.g., if EOF is at 4:00 PM, trigger CronJob at 4:10 PM). |
+| Configurable Schedules | Each CronJob should use a deployment-specific `descriptor.json` containing `<bucket_name>` and `<cronjob_run_time>`. |
+| File Upload            | CronJob POD mounts the EFS `/output` directory and uploads finalized files to S3. |
+| Archival Structure     | Files are uploaded into two S3 paths per file: `/archive/` and `/output/` subfolders under the bucket name. |
+| Deployment             | Deploy one CronJob Scheduler POD per file, each independently uploading based on its configured schedule and bucket settings. |
+---
+
+## 4.3 Packaging and Deployment
+ This section outlines the packaging and deployment strategy for the Camel Outbound File Adapter, transitioning from a reference implementation to a scalable, production-ready Kubernetes architecture. Each core component — `Scheduler`, `Processor`, and `CronJob Scheduler` — is packaged as a separate Docker image and deployed independently using Helm charts. 
+
+### 4.3.1 Deployment Strategies: 8×3 Model (Per-File Per-Component Deployment)
+
+The **8×3 model** represents a fully decoupled deployment approach where each file-specific pipeline includes its dedicated `Scheduler`, `Processor`, and `CronJob Scheduler` components. This results in a total of **24 deployments** (8 files × 3 components), each operating independently. 
+
+![](out/deployment-packaging-24/deployment-packaging-24.png)
+<br>Figure: 8x3 Model Deployment Stratrgy 
+
+<br>
+
+**Deployment Strategies (8 x 3 Model)**
+
+---
+| Area                  | Changes |
+|------------------------|---------|
+| Per-File Pipelines     | Deploy each `Scheduler`, `Processor`, and `CronJob Scheduler` separately per file (total of 3 POD types × number of files). |
+| Runtime Parameterization | Use Kubernetes `ConfigMaps` or Secrets to inject `descriptor.json` per deployment, avoiding hardcoding. |
+| Docker Image Reuse     | Use a single, shared Docker image per component (`Scheduler`, `Processor`, `CronJob`), configured at runtime via `descriptor.json`. |
+| Helm Charts            | Recommended: Package each component into Helm charts for easy per-file deployment and upgrade management. |
+| Monitoring and Logging | Implement pod-level logging to capture errors, EOF markers, processing counts, and upload success/failures. |
+| Health Checks          | Add `liveness` and `readiness` probes for each component to ensure they can restart cleanly and report health. |
+---
+
+While this model offers maximum runtime isolation, parallelism, and simplified traceability per file, it introduces additional overhead in deployment management, monitoring, and resource allocation. The approach is suitable for environments that prioritize strict functional separation, independent scaling, and granular fault recovery across file-specific workflows.
+
+### 4.3.2 Deployment Optimization: Shared Scheduler and CronJob (8+2 Model)
+
+This architecture introduces a shared deployment model that consolidates the Scheduler and CronJob Scheduler components to reduce deployment complexity and improve operational efficiency. 
+
+![](out/deployment-packaging-10/deployment-packaging-10.png)
+<br>Figure: 8+2 Model Deployment Stratrgy 
+
+Instead of deploying one instance per file, the system uses **a single shared `Scheduler`** to publish EOF signals for all batch files and **a single shared `CronJob Scheduler`** to upload finalized files from all output folders to Amazon S3. This reduces the total number of Kubernetes deployments from 24 (3 components × 8 files) to just **10 deployments** — 8 dedicated Processor PODs (one per file) and 2 shared control components. Each POD still mounts its file-specific descriptor.json to ensure clear separation of responsibilities, and the shared components are enhanced to dynamically read and process configurations for all file pipelines. This model preserves the single-threaded processing requirement for each file while simplifying lifecycle management, scaling, and observability.
+
+<br>
+
+**Deployment Strategies (8 + 2 Model)**
+
+---
+| Area                  | Changes (8+2 Deployment Model) |
+|------------------------|--------------------------------|
+| Per-File Pipelines     | Deploy only the `Processor` POD separately per file (8 total). Use one shared `Scheduler` and one shared `CronJob Scheduler` POD across all files. |
+| Runtime Parameterization | Use Kubernetes `ConfigMaps `to inject `descriptor.json` into each POD, allowing each to read file-specific configuration at runtime. |
+| Docker Image Reuse     | Use one shared Docker image per component (`Scheduler`, `Processor`, `CronJob`) across all deployments, configured at runtime via `descriptor.json`. |
+| Helm Charts            | Use three Helm charts (one per component). Each chart supports multiple instances using templated values and overrides. |
+| Monitoring and Logging | Centralize logging with file tags. Track EOF signals, transformation counts, and upload outcomes across all file pipelines. |
+| Health Checks          | Add liveness and readiness probes to each component POD to detect faults and enable automated restarts if necessary. |
+---

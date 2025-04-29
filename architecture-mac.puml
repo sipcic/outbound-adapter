@@ -1,0 +1,34 @@
+@startuml
+title Camel Outbound File Adapter - Reference Implementation Architecture
+actor Scheduler
+actor Producer
+
+package "Messaging Layer" {
+  [JMS Queue]
+  Producer --> [JMS Queue] : Send XML messages
+  Scheduler --> [JMS Queue] : Send EOF messages (Scheduled)
+}
+
+package "Processing Application" {
+  [Apache Camel Route] --> [XML Processor] : Transform XML → CSV row
+  [Apache Camel Route] --> [Exception Handler] : On error
+  [Apache Camel Route] --> [Batch Validator] : Track counts
+  [Apache Camel Route] --> [EOF Handler] : On EOF
+}
+
+package "Storage Layer" {
+  [Working File (/working)]
+  [Output File (/output)]
+  [Exception File (/exception)]
+}
+
+[XML Processor] --> [Working File (/working)] : Append CSV row
+[Exception Handler] --> [Exception File (/exception)] : Save message + stack trace
+[EOF Handler] --> [Output File (/output)] : Move + rename file
+
+package "Archival" {
+  [S3 Bucket]
+}
+[Output File (/output)] --> [S3 Bucket] : (Not implemented)
+
+@enduml

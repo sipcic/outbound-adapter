@@ -1,0 +1,55 @@
+@startuml
+title Packaging and Deployment Strategy – Camel Outbound File Adapter (Descriptor Correctly Mounted INSIDE Each POD)
+
+package "Packaging Layer" {
+  [Docker Image: Scheduler]
+  [Docker Image: Processor]
+  [Docker Image: CronJob Scheduler]
+}
+
+package "Deployment Layer" {
+  [Helm Chart: Scheduler Deployment (one per file)]
+  [Helm Chart: Processor Deployment (one per file)]
+  [Helm Chart: CronJob Scheduler Deployment (one per file)]
+}
+
+[Docker Image: Scheduler] --> [Helm Chart: Scheduler Deployment (one per file)] : Referenced in values.yaml
+[Docker Image: Processor] --> [Helm Chart: Processor Deployment (one per file)] : Referenced in values.yaml
+[Docker Image: CronJob Scheduler] --> [Helm Chart: CronJob Scheduler Deployment (one per file)] : Referenced in values.yaml
+
+package "Kubernetes Cluster" {
+
+  node "Scheduler PODs (one per file)" {
+    [descriptor-scheduler.json] #LightBlue
+    [Scheduler Container]
+    [descriptor-scheduler.json] --> [Scheduler Container] : Mount via ConfigMap
+  }
+
+  node "Processor PODs (one per file)" {
+    [descriptor-processor.json] #LightBlue
+    [Processor Container]
+    [descriptor-processor.json] --> [Processor Container] : Mount via ConfigMap
+    [EFS Mount /working]
+    [EFS Mount /output]
+    [EFS Mount /exception]
+    [Processor Container] --> [EFS Mount /working] : Write CSV/Pos rows
+    [Processor Container] --> [EFS Mount /output] : Finalize batches
+    [Processor Container] --> [EFS Mount /exception] : Save errors
+  }
+
+  node "CronJob Scheduler PODs (one per file)" {
+    [descriptor-cronjob.json] #LightBlue
+    [CronJob Container]
+    [descriptor-cronjob.json] --> [CronJob Container] : Mount via ConfigMap
+    [EFS Mount /output]
+    [CronJob Container] --> [EFS Mount /output] : Read finalized files
+    [CronJob Container] --> [S3 Bucket] : Upload finalized files
+  }
+
+}
+
+[Helm Chart: Scheduler Deployment (one per file)] --> [Scheduler PODs (one per file)]
+[Helm Chart: Processor Deployment (one per file)] --> [Processor PODs (one per file)]
+[Helm Chart: CronJob Scheduler Deployment (one per file)] --> [CronJob Scheduler PODs (one per file)]
+
+@enduml

@@ -1,0 +1,44 @@
+@startuml
+title Camel Outbound File Adapter - Reference Implementation Architecture
+
+actor Producer
+
+package "Messaging Layer" {
+  node "Scheduler POD" {
+    [Scheduler]
+  }
+  [JMS Queue \n Amazon MQ]
+  [Scheduler] --> [JMS Queue \n Amazon MQ] : Send EOF messages (Scheduled)
+  Producer --> [JMS Queue \n Amazon MQ] : Send XML messages
+}
+
+node "Processing Application POD" {
+  [Apache Camel Route] --> [XML Processor] : Transform XML → CSV row
+  [Apache Camel Route] --> [Exception Handler] : On error
+  [Apache Camel Route] --> [Batch Validator] : Track counts
+  [Apache Camel Route] --> [EOF Handler] : On EOF
+  
+  [descriptor.json] #lightblue
+  [descriptor.json] --> [XML Processor] : Field Mapping + Config
+}
+
+package "Storage Layer (EFS)" #lightblue {
+  [/working]
+  [/output]
+  [/exception]
+}
+
+[XML Processor] --> [/working] : Append CSV row
+[Exception Handler] --> [/exception] : Save message + stack trace
+[EOF Handler] --> [/output] : Move + rename file
+
+package "Archival" {
+  node "CronJob Scheduler POD" {
+    [Kubernetes \n CronJob Scheduler] #lightblue
+  }
+  [S3 Bucket]
+  [/output] --> [Kubernetes \n CronJob Scheduler] : Triggered after file move
+  [Kubernetes \n CronJob Scheduler] --> [S3 Bucket] : Upload finalized file
+}
+
+@enduml

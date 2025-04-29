@@ -1,0 +1,61 @@
+@startuml
+title Packaging and Deployment Strategy - Camel Outbound File Adapter (8 + 2 Deployments)
+
+skinparam rectangle {
+  BackgroundColor white
+  BorderColor black
+}
+skinparam componentStyle rectangle
+
+package "Packaging Layer" {
+  [Scheduler Image]
+  [Processor Image]
+  [CronJob Scheduler Image]
+}
+
+package "Deployment Layer" {
+  [Helm Chart: Scheduler (shared)]
+  [Helm Chart: Processor (one per file)]
+  [Helm Chart: CronJob Scheduler (shared)]
+}
+
+[Scheduler Image] --> [Helm Chart: Scheduler (shared)] : Referenced in values.yaml
+[Processor Image] --> [Helm Chart: Processor (one per file)] : Referenced in values.yaml
+[CronJob Scheduler Image] --> [Helm Chart: CronJob Scheduler (shared)] : Referenced in values.yaml
+
+package "Kubernetes Cluster" {
+  
+  node "Scheduler POD (shared)" {
+    [descriptor.json (Scheduler)] #LightBlue
+    [Scheduler Container]
+    [descriptor.json (Scheduler)] --> [Scheduler Container] : Mount via ConfigMap
+  }
+
+  node "Processor PODs (one per file)" {
+    [descriptor.json (Processor)] #LightBlue
+    [Processor Container]
+    [descriptor.json (Processor)] --> [Processor Container] : Mount via ConfigMap
+    [EFS Mount /working]
+    [EFS Mount /exception]
+    [EFS Mount /output]
+    [Processor Container] --> [EFS Mount /working] : Write CSV/Pos rows
+    [Processor Container] --> [EFS Mount /exception] : Save errors
+    [Processor Container] --> [EFS Mount /output] : Finalize batches
+  }
+
+  node "CronJob Scheduler POD (shared)" {
+    [descriptor.json (CronJob)] #LightBlue
+    [CronJob Container]
+    [descriptor.json (CronJob)] --> [CronJob Container] : Mount via ConfigMap
+    [EFS Mount /output]
+    [S3 Bucket]
+    [CronJob Container] --> [EFS Mount /output] : Read finalized files
+    [CronJob Container] --> [S3 Bucket] : Upload finalized files
+  }
+}
+
+[Helm Chart: Scheduler (shared)] --> [Scheduler POD (shared)]
+[Helm Chart: Processor (one per file)] --> [Processor PODs (one per file)]
+[Helm Chart: CronJob Scheduler (shared)] --> [CronJob Scheduler POD (shared)]
+
+@enduml

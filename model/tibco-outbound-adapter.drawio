@@ -1,0 +1,1089 @@
+<mxfile host="Electron" modified="2025-04-27T01:27:10.596Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.4.13 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="Ri1kFpWwXRzgUQ46fN4K" version="24.4.13" type="device">
+  <diagram name="Page-1" id="xEEuLAQlubvoNN5s95i2">
+    <mxGraphModel dx="2399" dy="870" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-19" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=9;" vertex="1" parent="1">
+          <mxGeometry x="-504" y="410" width="220" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-9" value="Get" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" parent="1" source="yM3X1NTKgKoNkWO_Ssvu-2" target="yM3X1NTKgKoNkWO_Ssvu-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-2" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.queue;fillColor=#e05243;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="-704.75" y="479" width="73.5" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-3" value="TFS.CLM.FCS.CUSTPUBRET.V1_0.IN" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-783" y="529" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-4" value="FA Retail Queue" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-723" y="440" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-5" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#e05243;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.bucket;" vertex="1" parent="1">
+          <mxGeometry x="419.5" y="529" width="75" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-6" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.efs_share;fillColor=#E05243;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-144" y="471.5" width="69" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-7" value="«Camel Adapter»&lt;br&gt;&lt;b&gt;Customer Publish Retail Adapter&lt;/b&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;strokeColor=#e05243;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="-485.75" y="458" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-8" value="" style="shape=module;jettyWidth=8;jettyHeight=4;strokeColor=#a43930;" vertex="1" parent="yM3X1NTKgKoNkWO_Ssvu-7">
+          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-10" value="Append" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="yM3X1NTKgKoNkWO_Ssvu-7" target="yM3X1NTKgKoNkWO_Ssvu-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-12" value="«Camel Scheduler»&lt;br&gt;&lt;b&gt;Scheduler&lt;/b&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;strokeColor=#e05243;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="-758" y="290" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-11" value="" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#e05243;shape=mxgraph.azure.scheduler;pointerEvents=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="-607" y="295" width="24" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-14" value="EOF" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="yM3X1NTKgKoNkWO_Ssvu-12" target="yM3X1NTKgKoNkWO_Ssvu-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-15" value="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 14.6667px; text-align: start; caret-color: rgb(33, 33, 33); text-wrap: wrap;&quot;&gt;&amp;nbsp;Closure timing is&amp;nbsp;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 14.6667px; text-align: start; caret-color: rgb(33, 33, 33); text-wrap: wrap;&quot;&gt;4:00 PM PST on&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 14.6667px; text-align: start; caret-color: rgb(33, 33, 33); text-wrap: wrap;&quot;&gt;Mon,Tue,Wed,Thurs,Fri&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-753" y="210" width="170" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-17" value="EFS" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-134.5" y="440" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-18" value="" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=pod" vertex="1" parent="1">
+          <mxGeometry x="-316" y="414.2" width="30" height="28.8" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-24" value="POD" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-359" y="414.2" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-27" value="One file per POD" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#a43930;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="-264" y="420" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-29" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=9;" vertex="1" parent="1">
+          <mxGeometry x="46" y="410" width="220" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-34" value="cp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" parent="1" source="yM3X1NTKgKoNkWO_Ssvu-30" target="yM3X1NTKgKoNkWO_Ssvu-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="yM3X1NTKgKoNkWO_Ssvu-30" target="yM3X1NTKgKoNkWO_Ssvu-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="296" y="503" />
+              <mxPoint x="296" y="568" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-75" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="yM3X1NTKgKoNkWO_Ssvu-30" target="yM3X1NTKgKoNkWO_Ssvu-73">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="296" y="503" />
+              <mxPoint x="296" y="410" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-30" value="«CronJob Scheduler»&lt;br&gt;&lt;b&gt;Kubernetes CronJob Scheduler&lt;/b&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;strokeColor=#e05243;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="64.25" y="458" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-31" value="" style="shape=module;jettyWidth=8;jettyHeight=4;strokeColor=#a43930;" vertex="1" parent="yM3X1NTKgKoNkWO_Ssvu-30">
+          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-32" value="" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=pod" vertex="1" parent="1">
+          <mxGeometry x="234" y="414.2" width="30" height="28.8" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-33" value="POD" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="191" y="414.2" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-36" value="/mnt/data/" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-44" y="471.5" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-37" value="/mnt/data/" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-264" y="471.5" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-41" value="One POD per Queue" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#a43930;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="-644" y="414.20000000000005" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-42" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=9;" vertex="1" parent="1">
+          <mxGeometry x="1202" y="460" width="220" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-43" value="Get" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" source="yM3X1NTKgKoNkWO_Ssvu-44" target="yM3X1NTKgKoNkWO_Ssvu-49" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-44" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.queue;fillColor=#e05243;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="1001.25" y="529" width="73.5" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-45" value="TFS.CLM.FCS.CUSTPUBLSE.V1_0.IN" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="923" y="579" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-46" value="FA Lease Queue" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="983" y="490" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-48" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.efs_share;fillColor=#E05243;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1562" y="521.5" width="69" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-49" value="«Camel Adapter»&lt;br&gt;&lt;b&gt;Customer Publish Lease Adapter&lt;/b&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;strokeColor=#e05243;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="1220.25" y="508" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-50" value="" style="shape=module;jettyWidth=8;jettyHeight=4;strokeColor=#a43930;" vertex="1" parent="yM3X1NTKgKoNkWO_Ssvu-49">
+          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-51" value="Append" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="yM3X1NTKgKoNkWO_Ssvu-49" target="yM3X1NTKgKoNkWO_Ssvu-48" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-52" value="«Camel Scheduler»&lt;br&gt;&lt;b&gt;Scheduler&lt;/b&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;strokeColor=#e05243;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="948" y="340" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-53" value="" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#e05243;shape=mxgraph.azure.scheduler;pointerEvents=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="1099" y="345" width="24" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-54" value="EOF" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" source="yM3X1NTKgKoNkWO_Ssvu-52" target="yM3X1NTKgKoNkWO_Ssvu-44" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-55" value="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 14.6667px; text-align: start; caret-color: rgb(33, 33, 33); text-wrap: wrap;&quot;&gt;&amp;nbsp;Closure timing is&amp;nbsp;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 14.6667px; text-align: start; caret-color: rgb(33, 33, 33); text-wrap: wrap;&quot;&gt;4:00 PM PST on&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 14.6667px; text-align: start; caret-color: rgb(33, 33, 33); text-wrap: wrap;&quot;&gt;Mon,Tue,Wed,Thurs,Fri&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="953" y="260" width="170" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-57" value="EFS" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1571.5" y="490" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-58" value="" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=pod" vertex="1" parent="1">
+          <mxGeometry x="1390" y="464.20000000000005" width="30" height="28.8" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-59" value="POD" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1347" y="464.20000000000005" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-60" value="One file per POD" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#a43930;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1442" y="470" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-62" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=9;" vertex="1" parent="1">
+          <mxGeometry x="1752" y="460" width="220" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-63" value="cp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" source="yM3X1NTKgKoNkWO_Ssvu-65" target="yM3X1NTKgKoNkWO_Ssvu-48" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-65" value="«CronJob Scheduler»&lt;br&gt;&lt;b&gt;Kubernetes CronJob Scheduler&lt;/b&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;strokeColor=#e05243;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="1770.25" y="508" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-66" value="" style="shape=module;jettyWidth=8;jettyHeight=4;strokeColor=#a43930;" vertex="1" parent="yM3X1NTKgKoNkWO_Ssvu-65">
+          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-67" value="" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=pod" vertex="1" parent="1">
+          <mxGeometry x="1940" y="464.20000000000005" width="30" height="28.8" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-68" value="POD" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1897" y="464.20000000000005" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-69" value="/mnt/data/" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1662" y="521.5" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-70" value="/mnt/data/" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1442" y="521.5" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-72" value="One POD per Queue" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#a43930;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1062" y="464.20000000000005" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-73" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#e05243;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.bucket;" vertex="1" parent="1">
+          <mxGeometry x="419.5" y="370" width="75" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-78" value="FinAcctCustPubLes.dat&amp;nbsp;&lt;div&gt;(positional)&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=24;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="913" y="190" width="280" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-79" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#e05243;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.bucket;" vertex="1" parent="1">
+          <mxGeometry x="2125.5" y="579" width="75" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" target="yM3X1NTKgKoNkWO_Ssvu-79" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1950" y="553" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="2002" y="553" />
+              <mxPoint x="2002" y="618" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-81" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" target="yM3X1NTKgKoNkWO_Ssvu-83" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1952" y="553" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="2002" y="553" />
+              <mxPoint x="2002" y="460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-83" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#e05243;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.bucket;" vertex="1" parent="1">
+          <mxGeometry x="2125.5" y="420" width="75" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-85" value="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 24px; text-align: start; caret-color: rgb(33, 33, 33); text-wrap: wrap;&quot;&gt;FinAcctCustPubRet.dat (positional)&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=24;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="-851" y="160" width="400" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-88" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=9;" vertex="1" parent="1">
+          <mxGeometry x="-449.5" y="1025" width="220" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-89" value="Get" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" source="yM3X1NTKgKoNkWO_Ssvu-90" target="yM3X1NTKgKoNkWO_Ssvu-94" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-90" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.queue;fillColor=#e05243;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="-704.25" y="1094" width="73.5" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-91" value="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; text-align: start; caret-color: rgb(33, 33, 33); text-wrap: wrap;&quot;&gt;TFS.CLM.FCS.FINACCTPRIVACYUPDATESRETL.V1_0.IN&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-837.5" y="1144" width="340" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-92" value="FA Retail Queue" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-722.5" y="1055" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-93" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.efs_share;fillColor=#E05243;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-89.5" y="1086.5" width="69" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-94" value="«Camel Adapter»&lt;br&gt;&lt;span style=&quot;color: rgb(33, 33, 33); text-align: start; caret-color: rgb(33, 33, 33);&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot; face=&quot;Helvetica&quot;&gt;&lt;b&gt;Privacy Update Retail File Adapter&lt;/b&gt;&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 14.6667px; text-align: start; caret-color: rgb(33, 33, 33);&quot;&gt;&amp;nbsp;&lt;/span&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;strokeColor=#e05243;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="-431.25" y="1073" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-95" value="" style="shape=module;jettyWidth=8;jettyHeight=4;strokeColor=#a43930;" vertex="1" parent="yM3X1NTKgKoNkWO_Ssvu-94">
+          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-96" value="Append" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="yM3X1NTKgKoNkWO_Ssvu-94" target="yM3X1NTKgKoNkWO_Ssvu-93" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-97" value="«Camel Scheduler»&lt;br&gt;&lt;b&gt;Scheduler&lt;/b&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;strokeColor=#e05243;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="-757.5" y="905" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-98" value="" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#e05243;shape=mxgraph.azure.scheduler;pointerEvents=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="-606.5" y="910" width="24" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-99" value="EOF" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" source="yM3X1NTKgKoNkWO_Ssvu-97" target="yM3X1NTKgKoNkWO_Ssvu-90" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-100" value="&amp;nbsp;Closure timing is&amp;nbsp;&lt;br&gt;4:00 PM PST on&amp;nbsp;&lt;br&gt;Mon, Tue, Wed, Thurs, Fri" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-747.5" y="830" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-102" value="EFS" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-80" y="1055" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-103" value="" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=pod" vertex="1" parent="1">
+          <mxGeometry x="-261.5" y="1029.2" width="30" height="28.8" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-104" value="POD" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-304.5" y="1029.2" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-105" value="One file per POD" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#a43930;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="-209.5" y="1045" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-107" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=9;" vertex="1" parent="1">
+          <mxGeometry x="100.5" y="1025" width="220" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-108" value="cp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" source="yM3X1NTKgKoNkWO_Ssvu-109" target="yM3X1NTKgKoNkWO_Ssvu-93" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-109" value="«CronJob Scheduler»&lt;br&gt;&lt;b&gt;Kubernetes CronJob Scheduler&lt;/b&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;strokeColor=#e05243;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="118.75" y="1073" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-110" value="" style="shape=module;jettyWidth=8;jettyHeight=4;strokeColor=#a43930;" vertex="1" parent="yM3X1NTKgKoNkWO_Ssvu-109">
+          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-111" value="" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=pod" vertex="1" parent="1">
+          <mxGeometry x="288.5" y="1029.2" width="30" height="28.8" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-112" value="POD" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="245.5" y="1029.2" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-113" value="/mnt/data/" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="10.5" y="1086.5" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-114" value="/mnt/data/" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-209.5" y="1086.5" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-115" value="One POD per Queue" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#a43930;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="-610.5" y="1043" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-116" value="ooacctr.dat&amp;nbsp;&lt;div&gt;(positional)&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=1;fontSize=24;" vertex="1" parent="1">
+          <mxGeometry x="-738.5" y="740" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-117" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#e05243;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.bucket;" vertex="1" parent="1">
+          <mxGeometry x="474" y="1144" width="75" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-118" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" target="yM3X1NTKgKoNkWO_Ssvu-117" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="298.5" y="1118" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="350.5" y="1118" />
+              <mxPoint x="350.5" y="1183" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-119" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" target="yM3X1NTKgKoNkWO_Ssvu-121" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="300.5" y="1118" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="350.5" y="1118" />
+              <mxPoint x="350.5" y="1025" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-121" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#e05243;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.bucket;" vertex="1" parent="1">
+          <mxGeometry x="474" y="985" width="75" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-123" value="FA Retail Queue -&amp;gt; Privacy Update Retail File Adapter -&amp;gt;&amp;nbsp; ooacctr.dat (positional)&#xa;TFS.CLM.FCS.FINACCTPRIVACYUPDATESRETL.V1_0.IN" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-292.5" y="940" width="550" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-124" value="FA Retail Queue -&amp;gt; Customer Publish Retail Adapter&amp;nbsp; -&amp;gt;&amp;nbsp; FinAcctCustPubRet.dat (positional)&#xa;TFS.CLM.FCS.CUSTPUBRET.V1_0.IN" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-356" y="320" width="620" height="50" as="geometry" />
+        </mxCell>
+        <UserObject label="FA Lease Queue -&gt; Customer Publish Lease Adapter  -&gt;  FinAcctCustPubLes.dat (positional)TFS.CLM.FCS.CUSTPUBLSE.V1_0.IN" link="FA Lease Queue -&gt; Customer Publish Lease Adapter  -&gt;  FinAcctCustPubLes.dat (positional)&#xa;&#xa;TFS.CLM.FCS.CUSTPUBLSE.V1_0.IN" id="yM3X1NTKgKoNkWO_Ssvu-125">
+          <mxCell style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+            <mxGeometry x="1356" y="330" width="520" height="70" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-130" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=9;" vertex="1" parent="1">
+          <mxGeometry x="1258" y="1089" width="220" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-131" value="Get" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" source="yM3X1NTKgKoNkWO_Ssvu-132" target="yM3X1NTKgKoNkWO_Ssvu-136" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-132" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.queue;fillColor=#e05243;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="1003.25" y="1158" width="73.5" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-133" value="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; text-align: start; caret-color: rgb(33, 33, 33); text-wrap: wrap;&quot;&gt;TFS.CLM.FCS.FINACCTPRIVACYUPDATESRETL.V1_0.IN&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="870" y="1208" width="340" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-134" value="FA Lease Queue" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="985" y="1119" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-135" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.efs_share;fillColor=#E05243;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1618" y="1150.5" width="69" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-136" value="«Camel Adapter»&lt;br&gt;&lt;span style=&quot;color: rgb(33, 33, 33); text-align: start; caret-color: rgb(33, 33, 33);&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot; face=&quot;Helvetica&quot;&gt;&lt;b&gt;Privacy Update Lease File Adapter&lt;/b&gt;&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 14.6667px; text-align: start; caret-color: rgb(33, 33, 33);&quot;&gt;&amp;nbsp;&lt;/span&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;strokeColor=#e05243;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="1276.25" y="1137" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-137" value="" style="shape=module;jettyWidth=8;jettyHeight=4;strokeColor=#a43930;" vertex="1" parent="yM3X1NTKgKoNkWO_Ssvu-136">
+          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-138" value="Append" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="yM3X1NTKgKoNkWO_Ssvu-136" target="yM3X1NTKgKoNkWO_Ssvu-135" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-139" value="«Camel Scheduler»&lt;br&gt;&lt;b&gt;Scheduler&lt;/b&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;strokeColor=#e05243;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="950" y="968.9999999999999" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-140" value="" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#e05243;shape=mxgraph.azure.scheduler;pointerEvents=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="1101" y="973.9999999999999" width="24" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-141" value="EOF" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" source="yM3X1NTKgKoNkWO_Ssvu-139" target="yM3X1NTKgKoNkWO_Ssvu-132" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-142" value=" Closure timing is &#xa;4:00 PM PST on &#xa;Mon, Tue, Wed, Thurs, Fri" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="945" y="888.9999999999999" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-143" value="EFS" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1627.5" y="1119" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-144" value="" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=pod" vertex="1" parent="1">
+          <mxGeometry x="1446" y="1093.1999999999998" width="30" height="28.8" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-145" value="POD" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1403" y="1093.1999999999998" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-146" value="One file per POD" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#a43930;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1498" y="1109" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-147" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=9;" vertex="1" parent="1">
+          <mxGeometry x="1808" y="1089" width="220" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-148" value="cp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" source="yM3X1NTKgKoNkWO_Ssvu-149" target="yM3X1NTKgKoNkWO_Ssvu-135" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-149" value="«CronJob Scheduler»&lt;br&gt;&lt;b&gt;Kubernetes CronJob Scheduler&lt;/b&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;strokeColor=#e05243;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="1826.25" y="1137" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-150" value="" style="shape=module;jettyWidth=8;jettyHeight=4;strokeColor=#a43930;" vertex="1" parent="yM3X1NTKgKoNkWO_Ssvu-149">
+          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-151" value="" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=pod" vertex="1" parent="1">
+          <mxGeometry x="1996" y="1093.1999999999998" width="30" height="28.8" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-152" value="POD" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1953" y="1093.1999999999998" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-153" value="/mnt/data/" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1718" y="1150.5" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-154" value="/mnt/data/" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1498" y="1150.5" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-155" value="One POD per Queue" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#a43930;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1097" y="1107" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-156" value="&lt;span style=&quot;text-align: left;&quot;&gt;ooacctl.dat&amp;nbsp;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;text-align: left;&quot;&gt;(positional)&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=24;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="969" y="813.9999999999999" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-157" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#e05243;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.bucket;" vertex="1" parent="1">
+          <mxGeometry x="2181.5" y="1208" width="75" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-158" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" target="yM3X1NTKgKoNkWO_Ssvu-157" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2006" y="1182" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="2058" y="1182" />
+              <mxPoint x="2058" y="1247" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-159" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" target="yM3X1NTKgKoNkWO_Ssvu-160" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2008" y="1182" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="2058" y="1182" />
+              <mxPoint x="2058" y="1089" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-160" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#e05243;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.bucket;" vertex="1" parent="1">
+          <mxGeometry x="2181.5" y="1049" width="75" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-161" value="FA Lease Queue -&gt; Privacy Update Lease File Adapter -&gt;  ooacctl.dat (positional)&#xa;TFS.CLM.FCS.FINACCTPRIVACYUPDATESLSE.V1_0.IN" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1415" y="998.9999999999999" width="550" height="50" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;b style=&quot;font-size: 12px;&quot;&gt;/mnt/data/&lt;/b&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;FaRetail&lt;/span&gt;&lt;b style=&quot;font-size: 12px;&quot;&gt;/&lt;/b&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;working&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;/&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;FinAcctCustPubRet.dat&lt;/span&gt;" link="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 14.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;FinAcctCustPubRet.dat&lt;/span&gt;" id="yM3X1NTKgKoNkWO_Ssvu-168">
+          <mxCell style="text;whiteSpace=wrap;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+            <mxGeometry x="-258" y="562" width="290" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;b style=&quot;font-size: 12px;&quot;&gt;/data/&lt;/b&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;FaRetail/&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;output/&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;FinAcctCustPubRet.dat.&amp;lt;timestamp&amp;gt;&lt;/span&gt;" link="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 14.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;FinAcctCustPubRet.dat&lt;/span&gt;" id="yM3X1NTKgKoNkWO_Ssvu-169">
+          <mxCell style="text;whiteSpace=wrap;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+            <mxGeometry x="317" y="610" width="352" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;b style=&quot;font-size: 12px;&quot;&gt;/mnt/data/&lt;/b&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;FaLease/&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;working&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;/&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;FinAcctCustPubLes.dat&lt;/span&gt;" link="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 14.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;FinAcctCustPubRet.dat&lt;/span&gt;" id="yM3X1NTKgKoNkWO_Ssvu-170">
+          <mxCell style="text;whiteSpace=wrap;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+            <mxGeometry x="1454.5" y="612" width="302" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;b style=&quot;font-size: 12px;&quot;&gt;/mnt/data/&lt;/b&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;FaLease/&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;output/&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;FinAcctCustPubLes.dat&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;.&amp;lt;timestamp&amp;gt;&lt;/span&gt;" link="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 14.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;FinAcctCustPubRet.dat&lt;/span&gt;" id="yM3X1NTKgKoNkWO_Ssvu-171">
+          <mxCell style="text;whiteSpace=wrap;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+            <mxGeometry x="1454.5" y="629" width="405" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;b style=&quot;font-size: 12px;&quot;&gt;/mnt/data/&lt;/b&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;FaRetail/&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;working/&lt;/span&gt;&lt;span style=&quot;background-color: initial; text-wrap: nowrap;&quot;&gt;&lt;font face=&quot;Helvetica&quot;&gt;ooacctr&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;.dat&lt;/span&gt;" link="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 14.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;FinAcctCustPubRet.dat&lt;/span&gt;" id="yM3X1NTKgKoNkWO_Ssvu-172">
+          <mxCell style="text;whiteSpace=wrap;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+            <mxGeometry x="-184.5" y="1162" width="242" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;b style=&quot;font-size: 12px;&quot;&gt;/mnt/data/&lt;/b&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;FaRetail/&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;output/&lt;/span&gt;&lt;span style=&quot;background-color: initial; text-wrap: nowrap;&quot;&gt;ooacctr&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;.dat&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;.&amp;lt;timestamp&amp;gt;&lt;/span&gt;" link="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 14.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;FinAcctCustPubRet.dat&lt;/span&gt;" id="yM3X1NTKgKoNkWO_Ssvu-173">
+          <mxCell style="text;whiteSpace=wrap;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+            <mxGeometry x="-184.5" y="1182" width="302" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;b style=&quot;font-size: 12px;&quot;&gt;/mnt/data/&lt;/b&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;FaLease/&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;working&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;/&lt;/span&gt;&lt;span style=&quot;background-color: initial; text-wrap: nowrap;&quot;&gt;ooacctl.dat&lt;/span&gt;" link="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 14.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;FinAcctCustPubRet.dat&lt;/span&gt;" id="yM3X1NTKgKoNkWO_Ssvu-174">
+          <mxCell style="text;whiteSpace=wrap;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+            <mxGeometry x="1521" y="1227" width="302" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;b style=&quot;font-size: 12px;&quot;&gt;/mnt/data/&lt;/b&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;FaLease/output/&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-color: initial; text-wrap: nowrap;&quot;&gt;ooacctl.dat&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;.&amp;lt;timestamp&amp;gt;&lt;/span&gt;" link="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 14.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;FinAcctCustPubRet.dat&lt;/span&gt;" id="yM3X1NTKgKoNkWO_Ssvu-175">
+          <mxCell style="text;whiteSpace=wrap;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+            <mxGeometry x="1523" y="1246" width="320" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;b style=&quot;font-size: 12px;&quot;&gt;/data/&lt;/b&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;FaRetail/archive&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;/&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;FinAcctCustPubRet.dat.&amp;lt;timestamp&amp;gt;&lt;/span&gt;" link="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 14.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;FinAcctCustPubRet.dat&lt;/span&gt;" id="yM3X1NTKgKoNkWO_Ssvu-180">
+          <mxCell style="text;whiteSpace=wrap;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+            <mxGeometry x="317" y="450" width="352" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;b style=&quot;font-size: 12px;&quot;&gt;/data/&lt;/b&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;FaLease/&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;output/&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;FinAcctCustPubLes.dat&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;.&amp;lt;timestamp&amp;gt;&lt;/span&gt;" link="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 14.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;FinAcctCustPubRet.dat&lt;/span&gt;" id="yM3X1NTKgKoNkWO_Ssvu-181">
+          <mxCell style="text;whiteSpace=wrap;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+            <mxGeometry x="2005.5" y="657" width="405" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;b style=&quot;font-size: 12px;&quot;&gt;/data/&lt;/b&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;FaLease/archive/&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;FinAcctCustPubLes.dat&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;.&amp;lt;timestamp&amp;gt;&lt;/span&gt;" link="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 14.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;FinAcctCustPubRet.dat&lt;/span&gt;" id="yM3X1NTKgKoNkWO_Ssvu-182">
+          <mxCell style="text;whiteSpace=wrap;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+            <mxGeometry x="2013" y="500" width="405" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;b style=&quot;font-size: 12px;&quot;&gt;/data/&lt;/b&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;FaRetail/&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;output/&lt;/span&gt;&lt;span style=&quot;background-color: initial; text-wrap: nowrap;&quot;&gt;ooacctr&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;.dat&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;.&amp;lt;timestamp&amp;gt;&lt;/span&gt;" link="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 14.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;FinAcctCustPubRet.dat&lt;/span&gt;" id="yM3X1NTKgKoNkWO_Ssvu-183">
+          <mxCell style="text;whiteSpace=wrap;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+            <mxGeometry x="390.5" y="1235" width="302" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;b style=&quot;font-size: 12px;&quot;&gt;/data/&lt;/b&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;FaRetail/archive&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;/&lt;/span&gt;&lt;span style=&quot;background-color: initial; text-wrap: nowrap;&quot;&gt;ooacctr&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;.dat&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;.&amp;lt;timestamp&amp;gt;&lt;/span&gt;" link="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 14.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;FinAcctCustPubRet.dat&lt;/span&gt;" id="yM3X1NTKgKoNkWO_Ssvu-184">
+          <mxCell style="text;whiteSpace=wrap;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+            <mxGeometry x="390.5" y="1065" width="302" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;b style=&quot;font-size: 12px;&quot;&gt;/data/&lt;/b&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;FaLease/output/&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-color: initial; text-wrap: nowrap;&quot;&gt;ooacctl.dat&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;.&amp;lt;timestamp&amp;gt;&lt;/span&gt;" link="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 14.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;FinAcctCustPubRet.dat&lt;/span&gt;" id="yM3X1NTKgKoNkWO_Ssvu-185">
+          <mxCell style="text;whiteSpace=wrap;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+            <mxGeometry x="2098" y="1286" width="320" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;b style=&quot;font-size: 12px;&quot;&gt;/data/&lt;/b&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;FaLease/archive/&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-color: initial; text-wrap: nowrap;&quot;&gt;ooacctl.dat&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;.&amp;lt;timestamp&amp;gt;&lt;/span&gt;" link="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 14.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;FinAcctCustPubRet.dat&lt;/span&gt;" id="yM3X1NTKgKoNkWO_Ssvu-186">
+          <mxCell style="text;whiteSpace=wrap;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+            <mxGeometry x="2098" y="1129" width="320" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;b style=&quot;font-size: 12px;&quot;&gt;/mnt/data/&lt;/b&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;FaRetail/&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;output/&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;FinAcctCustPubRet.dat.&amp;lt;timestamp&amp;gt;&lt;/span&gt;" link="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 14.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;FinAcctCustPubRet.dat&lt;/span&gt;" id="yM3X1NTKgKoNkWO_Ssvu-189">
+          <mxCell style="text;whiteSpace=wrap;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+            <mxGeometry x="-260" y="580" width="352" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-193" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=9;" vertex="1" parent="1">
+          <mxGeometry x="-488" y="1790" width="220" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-194" value="Get" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" source="yM3X1NTKgKoNkWO_Ssvu-195" target="yM3X1NTKgKoNkWO_Ssvu-199" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-195" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.queue;fillColor=#e05243;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="-742.75" y="1859" width="73.5" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-196" value="&lt;span style=&quot;text-align: left;&quot;&gt;TFS.CLM.INST.CUSTOMER_PUBLISH.V1_0.IN&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-846" y="1910" width="280" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-197" value="Insight File Adapter Queue" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-791" y="1820" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-198" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.efs_share;fillColor=#E05243;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-128" y="1851.5" width="69" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-199" value="«Camel Adapter»&lt;br&gt;&lt;span style=&quot;text-align: left; text-wrap: nowrap;&quot;&gt;I&lt;b&gt;nsight Customer Publish&amp;nbsp;&lt;/b&gt;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;text-align: left; text-wrap: nowrap;&quot;&gt;&lt;b&gt;File Adapter&lt;/b&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 14.6667px; text-align: start; caret-color: rgb(33, 33, 33);&quot;&gt;&lt;b&gt;&amp;nbsp;&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;strokeColor=#e05243;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="-469.75" y="1838" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-200" value="" style="shape=module;jettyWidth=8;jettyHeight=4;strokeColor=#a43930;" vertex="1" parent="yM3X1NTKgKoNkWO_Ssvu-199">
+          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-201" value="Append" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="yM3X1NTKgKoNkWO_Ssvu-199" target="yM3X1NTKgKoNkWO_Ssvu-198" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-202" value="«Camel Scheduler»&lt;br&gt;&lt;b&gt;Scheduler&lt;/b&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;strokeColor=#e05243;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="-796" y="1670" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-203" value="" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#e05243;shape=mxgraph.azure.scheduler;pointerEvents=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="-645" y="1675" width="24" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-204" value="EOF" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" source="yM3X1NTKgKoNkWO_Ssvu-202" target="yM3X1NTKgKoNkWO_Ssvu-195" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-205" value="&amp;nbsp;Closure timing is&amp;nbsp;&lt;br&gt;9:55 PM PST on&amp;nbsp;&lt;br&gt;Mon, Tue, Wed, Thurs, Fri" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-786" y="1595" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-206" value="EFS" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-118.5" y="1820" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-207" value="" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=pod" vertex="1" parent="1">
+          <mxGeometry x="-300" y="1794.1999999999998" width="30" height="28.8" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-208" value="POD" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-343" y="1794.1999999999998" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-209" value="One file per POD" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#a43930;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="-248" y="1810" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-210" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=9;" vertex="1" parent="1">
+          <mxGeometry x="62" y="1790" width="220" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-211" value="cp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" source="yM3X1NTKgKoNkWO_Ssvu-212" target="yM3X1NTKgKoNkWO_Ssvu-198" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-212" value="«CronJob Scheduler»&lt;br&gt;&lt;b&gt;Kubernetes CronJob Scheduler&lt;/b&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;strokeColor=#e05243;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="80.25" y="1838" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-213" value="" style="shape=module;jettyWidth=8;jettyHeight=4;strokeColor=#a43930;" vertex="1" parent="yM3X1NTKgKoNkWO_Ssvu-212">
+          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-214" value="" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=pod" vertex="1" parent="1">
+          <mxGeometry x="250" y="1794.1999999999998" width="30" height="28.8" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-215" value="POD" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="207" y="1794.1999999999998" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-216" value="/mnt/data/" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-28" y="1851.5" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-217" value="/mnt/data/" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-248" y="1851.5" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-218" value="One POD per Queue" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#a43930;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="-649" y="1808" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-219" value="&lt;span style=&quot;font-size: 24px; text-align: left;&quot;&gt;UCM_InSight_CustUpdate.txt&amp;nbsp;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 24px; text-align: left;&quot;&gt;(positional)&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=24;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="-803" y="1490" width="340" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-220" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#e05243;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.bucket;" vertex="1" parent="1">
+          <mxGeometry x="435.5" y="1909" width="75" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-221" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" target="yM3X1NTKgKoNkWO_Ssvu-220" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="1883" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="312" y="1883" />
+              <mxPoint x="312" y="1948" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-222" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" target="yM3X1NTKgKoNkWO_Ssvu-223" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="262" y="1883" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="312" y="1883" />
+              <mxPoint x="312" y="1790" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-223" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#e05243;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.bucket;" vertex="1" parent="1">
+          <mxGeometry x="435.5" y="1750" width="75" height="78" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;b style=&quot;font-size: 12px;&quot;&gt;/mnt/data/&lt;/b&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Insight&lt;/span&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;/&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;working&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;/&lt;/span&gt;&lt;span style=&quot;text-wrap: nowrap;&quot;&gt;UCM_InSight_CustUpdate.txt&lt;/span&gt;" link="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 14.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;FinAcctCustPubRet.dat&lt;/span&gt;" id="yM3X1NTKgKoNkWO_Ssvu-225">
+          <mxCell style="text;whiteSpace=wrap;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+            <mxGeometry x="-248" y="1940" width="302" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;b style=&quot;font-size: 12px;&quot;&gt;/mnt/data/&lt;/b&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Insight&lt;/span&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;/output/&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;text-wrap: nowrap;&quot;&gt;UCM_InSight_CustUpdate.txt&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;.&amp;lt;timestamp&amp;gt;&lt;/span&gt;" link="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 14.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;FinAcctCustPubRet.dat&lt;/span&gt;" id="yM3X1NTKgKoNkWO_Ssvu-226">
+          <mxCell style="text;whiteSpace=wrap;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+            <mxGeometry x="-250" y="1960" width="367" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-229" value="Insight File Adapter Queue -&amp;gt; Insight Customer Publish File Adapter&amp;nbsp;&amp;nbsp; -&amp;gt;&amp;nbsp; UCM_InSight_CustUpdate.txt (positional)&#xa;TFS.CLM.INST.CUSTOMER_PUBLISH.V1_0.IN" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-478.5" y="1675" width="770" height="50" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;b style=&quot;font-size: 12px;&quot;&gt;/data/&lt;/b&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Insight&lt;/span&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;/output/&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;text-wrap: nowrap;&quot;&gt;UCM_InSight_CustUpdate.txt&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;.&amp;lt;timestamp&amp;gt;&lt;/span&gt;" link="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 14.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;FinAcctCustPubRet.dat&lt;/span&gt;" id="yM3X1NTKgKoNkWO_Ssvu-230">
+          <mxCell style="text;whiteSpace=wrap;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+            <mxGeometry x="315.5" y="1987" width="367" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;b style=&quot;font-size: 12px;&quot;&gt;/data/&lt;/b&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Insight&lt;/span&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;/archive/&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;text-wrap: nowrap;&quot;&gt;UCM_InSight_CustUpdate.txt&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;.&amp;lt;timestamp&amp;gt;&lt;/span&gt;" link="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 14.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;FinAcctCustPubRet.dat&lt;/span&gt;" id="yM3X1NTKgKoNkWO_Ssvu-231">
+          <mxCell style="text;whiteSpace=wrap;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+            <mxGeometry x="319" y="1830" width="367" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-232" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=9;" vertex="1" parent="1">
+          <mxGeometry x="1288.25" y="1785" width="220" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-233" value="Get" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" source="yM3X1NTKgKoNkWO_Ssvu-234" target="yM3X1NTKgKoNkWO_Ssvu-238" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-234" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.queue;fillColor=#e05243;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="1033.5" y="1854" width="73.5" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-235" value="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; text-align: start; caret-color: rgb(33, 33, 33); text-wrap: wrap;&quot;&gt;TFS.CLM.INST.PRIVACY_UPDATES.V1_0.IN&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="935.25" y="1904" width="270" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-236" value="Insight File Adapter Queue" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="985.25" y="1815" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-237" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.efs_share;fillColor=#E05243;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1648.25" y="1846.5" width="69" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-238" value="«Camel Adapter»&lt;br&gt;&lt;div style=&quot;&quot;&gt;&lt;b&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; text-align: start; caret-color: rgb(33, 33, 33);&quot;&gt;Insight Privacy Update File Adapter&lt;/span&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; text-align: start; caret-color: rgb(33, 33, 33);&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/b&gt;&lt;/div&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;strokeColor=#e05243;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="1306.5" y="1833" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-239" value="" style="shape=module;jettyWidth=8;jettyHeight=4;strokeColor=#a43930;" vertex="1" parent="yM3X1NTKgKoNkWO_Ssvu-238">
+          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-240" value="Append" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="yM3X1NTKgKoNkWO_Ssvu-238" target="yM3X1NTKgKoNkWO_Ssvu-237" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-241" value="«Camel Scheduler»&lt;br&gt;&lt;b&gt;Scheduler&lt;/b&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;strokeColor=#e05243;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="980.25" y="1665" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-242" value="" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#e05243;shape=mxgraph.azure.scheduler;pointerEvents=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="1131.25" y="1670" width="24" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-243" value="EOF" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" source="yM3X1NTKgKoNkWO_Ssvu-241" target="yM3X1NTKgKoNkWO_Ssvu-234" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-244" value="&amp;nbsp;Closure timing is&amp;nbsp;&lt;br&gt;9:55 PM PST on&amp;nbsp;&lt;br&gt;Mon, Tue, Wed, Thurs, Fri" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="990.25" y="1590" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-245" value="EFS" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1657.75" y="1815" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-246" value="" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=pod" vertex="1" parent="1">
+          <mxGeometry x="1476.25" y="1789.1999999999998" width="30" height="28.8" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-247" value="POD" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1433.25" y="1789.1999999999998" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-248" value="One file per POD" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#a43930;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1528.25" y="1805" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-249" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=9;" vertex="1" parent="1">
+          <mxGeometry x="1838.25" y="1785" width="220" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-250" value="cp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" source="yM3X1NTKgKoNkWO_Ssvu-251" target="yM3X1NTKgKoNkWO_Ssvu-237" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-251" value="«CronJob Scheduler»&lt;br&gt;&lt;b&gt;Kubernetes CronJob Scheduler&lt;/b&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;strokeColor=#e05243;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="1856.5" y="1833" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-252" value="" style="shape=module;jettyWidth=8;jettyHeight=4;strokeColor=#a43930;" vertex="1" parent="yM3X1NTKgKoNkWO_Ssvu-251">
+          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-253" value="" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=pod" vertex="1" parent="1">
+          <mxGeometry x="2026.25" y="1789.1999999999998" width="30" height="28.8" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-254" value="POD" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1983.25" y="1789.1999999999998" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-255" value="/mnt/data/" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1748.25" y="1846.5" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-256" value="/mnt/data/" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1528.25" y="1846.5" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-257" value="One POD per Queue" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#a43930;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1127.25" y="1803" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-258" value="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; text-align: start; caret-color: rgb(33, 33, 33); text-wrap: wrap; font-size: 24px;&quot;&gt;UCM_InSight_Priv.txt (positional)&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=24;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="888.25" y="1520" width="380" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-259" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#e05243;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.bucket;" vertex="1" parent="1">
+          <mxGeometry x="2211.75" y="1904" width="75" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-260" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" target="yM3X1NTKgKoNkWO_Ssvu-259" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2036.25" y="1878" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="2088.25" y="1878" />
+              <mxPoint x="2088.25" y="1943" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-261" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" target="yM3X1NTKgKoNkWO_Ssvu-262" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2038.25" y="1878" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="2088.25" y="1878" />
+              <mxPoint x="2088.25" y="1785" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-262" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#e05243;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.bucket;" vertex="1" parent="1">
+          <mxGeometry x="2211.75" y="1745" width="75" height="78" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;b style=&quot;font-size: 12px;&quot;&gt;/mnt/data/&lt;/b&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Insight&lt;/span&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;/&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;working&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;/&lt;/span&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;UCM_InSight_Priv.txt&lt;/span&gt;" link="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 14.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;FinAcctCustPubRet.dat&lt;/span&gt;" id="yM3X1NTKgKoNkWO_Ssvu-263">
+          <mxCell style="text;whiteSpace=wrap;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+            <mxGeometry x="1528.25" y="1935" width="302" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;b style=&quot;font-size: 12px;&quot;&gt;/mnt/data/&lt;/b&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Insight&lt;/span&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;/output/&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;UCM_InSight_Priv.txt&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;.&amp;lt;timestamp&amp;gt;&lt;/span&gt;" link="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 14.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;FinAcctCustPubRet.dat&lt;/span&gt;" id="yM3X1NTKgKoNkWO_Ssvu-264">
+          <mxCell style="text;whiteSpace=wrap;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+            <mxGeometry x="1526.25" y="1955" width="367" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;p class=&quot;MsoNormal&quot; style=&quot;forced-color-adjust: none; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(251, 251, 251); text-decoration: none; margin: 0in; font-size: 12px; font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33); color: rgb(33, 33, 33); text-align: start;&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; font-size: 12px;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Insight File Adapter Queue -&amp;gt; Insight Privacy Update File Adapter&amp;nbsp; -&amp;gt;&amp;nbsp; UCM_InSight_Priv.txt (positional)&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;MsoNormal&quot; style=&quot;forced-color-adjust: none; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(251, 251, 251); text-decoration: none; margin: 0in; font-size: 12px; font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33); color: rgb(33, 33, 33); text-align: start;&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; font-size: 12px;&quot;&gt;TFS.CLM.INST.PRIVACY_UPDATES.V1_0.IN&lt;/span&gt;&lt;/p&gt;" link="&lt;p class=&quot;MsoNormal&quot; style=&quot;forced-color-adjust: none; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(251, 251, 251); text-decoration: none; margin: 0in; font-size: 16px; font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33); color: rgb(33, 33, 33); text-align: start;&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; font-size: 11pt;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;MsoNormal&quot; style=&quot;forced-color-adjust: none; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(251, 251, 251); text-decoration: none; margin: 0in; font-size: 16px; font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33); color: rgb(33, 33, 33); text-align: start;&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; font-size: 11pt;&quot;&gt;Insight File Adapter Queue -&amp;gt; Insight Privacy Update File Adapter&amp;nbsp; -&amp;gt;&amp;nbsp; UCM_InSight_Priv.txt (positional)&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;MsoNormal&quot; style=&quot;forced-color-adjust: none; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(251, 251, 251); text-decoration: none; margin: 0in; font-size: 16px; font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33); color: rgb(33, 33, 33); text-align: start;&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; font-size: 11pt;&quot;&gt;TFS.CLM.INST.PRIVACY_UPDATES.V1_0.IN&lt;/span&gt;&lt;/p&gt;" id="yM3X1NTKgKoNkWO_Ssvu-268">
+          <mxCell style="text;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+            <mxGeometry x="1274.25" y="1685" width="810" height="50" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;b style=&quot;font-size: 12px;&quot;&gt;/data/&lt;/b&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Insight&lt;/span&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;/output/&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;UCM_InSight_Priv.txt&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;.&amp;lt;timestamp&amp;gt;&lt;/span&gt;" link="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 14.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;FinAcctCustPubRet.dat&lt;/span&gt;" id="yM3X1NTKgKoNkWO_Ssvu-269">
+          <mxCell style="text;whiteSpace=wrap;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+            <mxGeometry x="2110.75" y="1982" width="367" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;b style=&quot;font-size: 12px;&quot;&gt;/data/&lt;/b&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Insight&lt;/span&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;/archive/&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;UCM_InSight_Priv.txt&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;.&amp;lt;timestamp&amp;gt;&lt;/span&gt;" link="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 14.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;FinAcctCustPubRet.dat&lt;/span&gt;" id="yM3X1NTKgKoNkWO_Ssvu-270">
+          <mxCell style="text;whiteSpace=wrap;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+            <mxGeometry x="2110.75" y="1823" width="367" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-272" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=9;" vertex="1" parent="1">
+          <mxGeometry x="-520" y="2515" width="220" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-273" value="Get" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" source="yM3X1NTKgKoNkWO_Ssvu-274" target="yM3X1NTKgKoNkWO_Ssvu-278" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-274" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.queue;fillColor=#e05243;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="-774.75" y="2584" width="73.5" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-275" value="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; text-align: start; caret-color: rgb(33, 33, 33); text-wrap: wrap;&quot;&gt;TFS.CRM.DWH.INST_COMMENTS.V1_0.IN&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="-868" y="2634" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-276" value="Insight File Adapter Queue" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-823" y="2545" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-277" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.efs_share;fillColor=#E05243;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-160" y="2576.5" width="69" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-278" value="«Camel Adapter»&lt;br&gt;&lt;div style=&quot;&quot;&gt;&lt;b&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; text-align: start; caret-color: rgb(33, 33, 33); background-color: initial;&quot;&gt;Insight Comments File Adapter&lt;/span&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; text-align: start; caret-color: rgb(33, 33, 33);&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/b&gt;&lt;/div&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;strokeColor=#e05243;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="-501.75" y="2563" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-279" value="" style="shape=module;jettyWidth=8;jettyHeight=4;strokeColor=#a43930;" vertex="1" parent="yM3X1NTKgKoNkWO_Ssvu-278">
+          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-280" value="Append" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="yM3X1NTKgKoNkWO_Ssvu-278" target="yM3X1NTKgKoNkWO_Ssvu-277" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-281" value="«Camel Scheduler»&lt;br&gt;&lt;b&gt;Scheduler&lt;/b&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;strokeColor=#e05243;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="-828" y="2395" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-282" value="" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#e05243;shape=mxgraph.azure.scheduler;pointerEvents=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="-677" y="2400" width="24" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-283" value="EOF" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" source="yM3X1NTKgKoNkWO_Ssvu-281" target="yM3X1NTKgKoNkWO_Ssvu-274" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-284" value="&amp;nbsp;Closure timing is&amp;nbsp;&lt;br&gt;11:58 PM PST&amp;nbsp;&lt;div&gt;on all days of the week&amp;nbsp;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-813" y="2320" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-285" value="EFS" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-150.5" y="2545" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-286" value="" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=pod" vertex="1" parent="1">
+          <mxGeometry x="-332" y="2519.2" width="30" height="28.8" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-287" value="POD" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-375" y="2519.2" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-288" value="One file per POD" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#a43930;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="-280" y="2535" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-289" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=9;" vertex="1" parent="1">
+          <mxGeometry x="30" y="2515" width="220" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-290" value="cp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" source="yM3X1NTKgKoNkWO_Ssvu-291" target="yM3X1NTKgKoNkWO_Ssvu-277" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-291" value="«CronJob Scheduler»&lt;br&gt;&lt;b&gt;Kubernetes CronJob Scheduler&lt;/b&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;strokeColor=#e05243;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="48.25" y="2563" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-292" value="" style="shape=module;jettyWidth=8;jettyHeight=4;strokeColor=#a43930;" vertex="1" parent="yM3X1NTKgKoNkWO_Ssvu-291">
+          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-293" value="" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=pod" vertex="1" parent="1">
+          <mxGeometry x="218" y="2519.2" width="30" height="28.8" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-294" value="POD" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="175" y="2519.2" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-295" value="/mnt/data/" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-60" y="2576.5" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-296" value="/mnt/data/" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-280" y="2576.5" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-297" value="One POD per Queue" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#a43930;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="-681" y="2533" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-298" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#e05243;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.bucket;" vertex="1" parent="1">
+          <mxGeometry x="403.5" y="2634" width="75" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-299" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" target="yM3X1NTKgKoNkWO_Ssvu-298" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="228" y="2608" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="280" y="2608" />
+              <mxPoint x="280" y="2673" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-300" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" target="yM3X1NTKgKoNkWO_Ssvu-301" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="230" y="2608" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="280" y="2608" />
+              <mxPoint x="280" y="2515" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-301" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#e05243;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.bucket;" vertex="1" parent="1">
+          <mxGeometry x="403.5" y="2475" width="75" height="78" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;b style=&quot;font-size: 12px;&quot;&gt;/mnt/data/&lt;/b&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Insight&lt;/span&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;/&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;working&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;/&lt;/span&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;T_SIEBEL_NOTES.dat&lt;/span&gt;" link="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 14.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;FinAcctCustPubRet.dat&lt;/span&gt;" id="yM3X1NTKgKoNkWO_Ssvu-302">
+          <mxCell style="text;whiteSpace=wrap;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+            <mxGeometry x="-280" y="2665" width="302" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;b style=&quot;font-size: 12px;&quot;&gt;/mnt/data/&lt;/b&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Insight&lt;/span&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;/output/&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;T_SIEBEL_NOTES.dat&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;.&amp;lt;timestamp&amp;gt;&lt;/span&gt;" link="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 14.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;FinAcctCustPubRet.dat&lt;/span&gt;" id="yM3X1NTKgKoNkWO_Ssvu-303">
+          <mxCell style="text;whiteSpace=wrap;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+            <mxGeometry x="-282" y="2685" width="367" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;b style=&quot;font-size: 12px;&quot;&gt;/data/&lt;/b&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Insight&lt;/span&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;/output/&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;T_SIEBEL_NOTES.dat&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;.&amp;lt;timestamp&amp;gt;&lt;/span&gt;" link="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 14.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;FinAcctCustPubRet.dat&lt;/span&gt;" id="yM3X1NTKgKoNkWO_Ssvu-305">
+          <mxCell style="text;whiteSpace=wrap;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+            <mxGeometry x="302.5" y="2712" width="367" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;b style=&quot;font-size: 12px;&quot;&gt;/data/&lt;/b&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Insight&lt;/span&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;/archive/&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;T_SIEBEL_NOTES.dat&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;.&amp;lt;timestamp&amp;gt;&lt;/span&gt;" link="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 14.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;FinAcctCustPubRet.dat&lt;/span&gt;" id="yM3X1NTKgKoNkWO_Ssvu-306">
+          <mxCell style="text;whiteSpace=wrap;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+            <mxGeometry x="302.5" y="2553" width="367" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;p class=&quot;MsoNormal&quot; style=&quot;forced-color-adjust: none; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(251, 251, 251); text-decoration: none; margin: 0in; font-size: 12px; font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33); color: rgb(33, 33, 33); text-align: start;&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; font-size: 12px;&quot;&gt;Insight File Adapter Queue -&amp;gt; Insight Comments File Adapter&amp;nbsp;&amp;nbsp; -&amp;gt;&amp;nbsp; T_SIEBEL_NOTES.dat (csv)&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;MsoNormal&quot; style=&quot;forced-color-adjust: none; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(251, 251, 251); text-decoration: none; margin: 0in; font-size: 12px; font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33); color: rgb(33, 33, 33); text-align: start;&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; font-size: 12px;&quot;&gt;TFS.CRM.DWH.INST_COMMENTS.V1_0.IN&lt;/span&gt;&lt;/p&gt;" link="&lt;p class=&quot;MsoNormal&quot; style=&quot;forced-color-adjust: none; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(251, 251, 251); text-decoration: none; margin: 0in; font-size: 16px; font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33); color: rgb(33, 33, 33); text-align: start;&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; font-size: 11pt;&quot;&gt;Insight File Adapter Queue -&amp;gt; Insight Comments File Adapter&amp;nbsp;&amp;nbsp; -&amp;gt;&amp;nbsp; T_SIEBEL_NOTES.dat (csv)&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;MsoNormal&quot; style=&quot;forced-color-adjust: none; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(251, 251, 251); text-decoration: none; margin: 0in; font-size: 16px; font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33); color: rgb(33, 33, 33); text-align: start;&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; font-size: 11pt;&quot;&gt;TFS.CRM.DWH.INST_COMMENTS.V1_0.IN&lt;/span&gt;&lt;/p&gt;" id="yM3X1NTKgKoNkWO_Ssvu-307">
+          <mxCell style="text;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+            <mxGeometry x="-534" y="2410" width="680" height="80" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-308" value="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; text-align: start; caret-color: rgb(33, 33, 33); text-wrap: wrap; font-size: 24px;&quot;&gt;T_SIEBEL_NOTES.dat (csv)&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=24;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="-890" y="2270" width="330" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-309" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=9;" vertex="1" parent="1">
+          <mxGeometry x="1370.5" y="2523" width="220" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-310" value="Get" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" source="yM3X1NTKgKoNkWO_Ssvu-311" target="yM3X1NTKgKoNkWO_Ssvu-315" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-311" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.queue;fillColor=#e05243;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="1115.75" y="2592" width="73.5" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-312" value="&lt;span style=&quot;text-align: left;&quot;&gt;TFS.CRM.DWH.INST_CLICK2DIAL_COMMENTS.V1_0.IN&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="982.5" y="2642" width="340" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-313" value="&lt;span style=&quot;text-align: left;&quot;&gt;Insight&amp;nbsp; Click2Dial File Adapter Queue&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1037.5" y="2553" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-314" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.efs_share;fillColor=#E05243;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1730.5" y="2584.5" width="69" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-315" value="«Camel Adapter»&lt;br&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;text-align: left; text-wrap: nowrap; background-color: initial;&quot;&gt;&lt;b&gt;Insight Click2Dial Comments&amp;nbsp;&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;b&gt;&lt;span style=&quot;text-align: left; text-wrap: nowrap; background-color: initial;&quot;&gt;File Adapter&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; text-align: start; caret-color: rgb(33, 33, 33);&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/b&gt;&lt;/div&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;strokeColor=#e05243;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="1388.75" y="2571" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-316" value="" style="shape=module;jettyWidth=8;jettyHeight=4;strokeColor=#a43930;" vertex="1" parent="yM3X1NTKgKoNkWO_Ssvu-315">
+          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-317" value="Append" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="yM3X1NTKgKoNkWO_Ssvu-315" target="yM3X1NTKgKoNkWO_Ssvu-314" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-318" value="«Camel Scheduler»&lt;br&gt;&lt;b&gt;Scheduler&lt;/b&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;strokeColor=#e05243;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="1062.5" y="2403" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-319" value="" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#e05243;shape=mxgraph.azure.scheduler;pointerEvents=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="1213.5" y="2408" width="24" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-320" value="EOF" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" source="yM3X1NTKgKoNkWO_Ssvu-318" target="yM3X1NTKgKoNkWO_Ssvu-311" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-321" value="&amp;nbsp;Closure timing is&amp;nbsp;&lt;br&gt;11:58 PM PST&amp;nbsp;&lt;div&gt;on all days of the week&amp;nbsp;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1077.5" y="2328" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-322" value="EFS" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1740" y="2553" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-323" value="" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=pod" vertex="1" parent="1">
+          <mxGeometry x="1558.5" y="2527.2" width="30" height="28.8" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-324" value="POD" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1515.5" y="2527.2" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-325" value="One file per POD" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#a43930;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1610.5" y="2543" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-326" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=9;" vertex="1" parent="1">
+          <mxGeometry x="1920.5" y="2523" width="220" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-327" value="cp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" source="yM3X1NTKgKoNkWO_Ssvu-328" target="yM3X1NTKgKoNkWO_Ssvu-314" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-328" value="«CronJob Scheduler»&lt;br&gt;&lt;b&gt;Kubernetes CronJob Scheduler&lt;/b&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;strokeColor=#e05243;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="1938.75" y="2571" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-329" value="" style="shape=module;jettyWidth=8;jettyHeight=4;strokeColor=#a43930;" vertex="1" parent="yM3X1NTKgKoNkWO_Ssvu-328">
+          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-330" value="" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=pod" vertex="1" parent="1">
+          <mxGeometry x="2108.5" y="2527.2" width="30" height="28.8" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-331" value="POD" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="2065.5" y="2527.2" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-332" value="/mnt/data/" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1830.5" y="2584.5" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-333" value="/mnt/data/" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1610.5" y="2584.5" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-334" value="One POD per Queue" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#a43930;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1213.5" y="2527.2" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-335" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#e05243;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.bucket;" vertex="1" parent="1">
+          <mxGeometry x="2294" y="2642" width="75" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-336" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" target="yM3X1NTKgKoNkWO_Ssvu-335" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2118.5" y="2616" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="2170.5" y="2616" />
+              <mxPoint x="2170.5" y="2681" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-337" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" target="yM3X1NTKgKoNkWO_Ssvu-338" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2120.5" y="2616" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="2170.5" y="2616" />
+              <mxPoint x="2170.5" y="2523" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-338" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#e05243;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.bucket;" vertex="1" parent="1">
+          <mxGeometry x="2294" y="2483" width="75" height="78" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;b style=&quot;font-size: 12px;&quot;&gt;/mnt/data/&lt;/b&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Click2Dial&lt;/span&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;/&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;working&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;/&lt;/span&gt;&lt;span style=&quot;text-wrap: nowrap;&quot;&gt;SF_ClickToDial_INS_COMMENTS.dat&lt;/span&gt;" link="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 14.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;FinAcctCustPubRet.dat&lt;/span&gt;" id="yM3X1NTKgKoNkWO_Ssvu-339">
+          <mxCell style="text;whiteSpace=wrap;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+            <mxGeometry x="1584.5" y="2693" width="302" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;b style=&quot;font-size: 12px;&quot;&gt;/mnt/data/&lt;/b&gt;Click2Dial&lt;span style=&quot;font-size: 12px;&quot;&gt;/output/&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;text-wrap: nowrap;&quot;&gt;SF_ClickToDial_INS_COMMENTS.dat&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;.&amp;lt;timestamp&amp;gt;&lt;/span&gt;" link="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 14.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;FinAcctCustPubRet.dat&lt;/span&gt;" id="yM3X1NTKgKoNkWO_Ssvu-340">
+          <mxCell style="text;whiteSpace=wrap;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+            <mxGeometry x="1582.5" y="2713" width="462" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-344" value="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 24px; text-align: start; caret-color: rgb(33, 33, 33); text-wrap: wrap;&quot;&gt;SF_ClickToDial_INS_COMMENTS.dat (csv)&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=24;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="920.5" y="2278" width="490" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-345" value="Insight&amp;nbsp; Click2Dial File Adapter Queue -&amp;gt; Insight Click2Dial Comments File Adapter&amp;nbsp; -&amp;gt;&amp;nbsp; SF_ClickToDial_INS_COMMENTS.dat (csv)&#xa;TFS.CRM.DWH.INST_CLICK2DIAL_COMMENTS.V1_0.IN" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1334" y="2418" width="880" height="50" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;b style=&quot;font-size: 12px;&quot;&gt;&amp;nbsp;/data/&lt;/b&gt;Click2Dial&lt;span style=&quot;font-size: 12px;&quot;&gt;/output/&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;text-wrap: nowrap;&quot;&gt;SF_ClickToDial_INS_COMMENTS.dat&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;.&amp;lt;timestamp&amp;gt;&lt;/span&gt;" link="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 14.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;FinAcctCustPubRet.dat&lt;/span&gt;" id="yM3X1NTKgKoNkWO_Ssvu-346">
+          <mxCell style="text;whiteSpace=wrap;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+            <mxGeometry x="2174" y="2720" width="462" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;&lt;b style=&quot;font-size: 12px;&quot;&gt;&amp;nbsp;/data/&lt;/b&gt;Click2Dial&lt;span style=&quot;font-size: 12px;&quot;&gt;/archive/&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;text-wrap: nowrap;&quot;&gt;SF_ClickToDial_INS_COMMENTS.dat&lt;/span&gt;&lt;span style=&quot;background-color: initial; color: rgb(33, 33, 33); font-family: Aptos, sans-serif; caret-color: rgb(33, 33, 33);&quot;&gt;.&amp;lt;timestamp&amp;gt;&lt;/span&gt;" link="&lt;span style=&quot;color: rgb(33, 33, 33); font-family: Aptos, sans-serif; font-size: 14.6667px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: rgb(33, 33, 33); white-space: normal; background-color: rgb(251, 251, 251); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;FinAcctCustPubRet.dat&lt;/span&gt;" id="yM3X1NTKgKoNkWO_Ssvu-347">
+          <mxCell style="text;whiteSpace=wrap;html=1;align=left;fontSize=12;" vertex="1" parent="1">
+            <mxGeometry x="2174" y="2561" width="462" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="s3://&lt;your-bucket-name&gt;/&#xa;├── FaRetail/&#xa;│   ├── archive/&#xa;│   │   ├── FinAcctCustPubRet.dat.&lt;timestamp&gt;&#xa;│   │   └── ooacctr.dat.&lt;timestamp&gt;&#xa;│   ├── output/&#xa;│   │   ├── FinAcctCustPubRet.dat.&lt;timestamp&gt;&#xa;│   │   └── ooacctr.dat.&lt;timestamp&gt;&#xa;├── FaLease/&#xa;│   ├── archive/&#xa;│   │   ├── FinAcctCustPubLes.dat.&lt;timestamp&gt;&#xa;│   │   └── ooacctl.dat.&lt;timestamp&gt;&#xa;│   ├── output/&#xa;│   │   ├── FinAcctCustPubLes.dat.&lt;timestamp&gt;&#xa;│   │   └── ooacctl.dat.&lt;timestamp&gt;&#xa;├── Insight/&#xa;│   ├── archive/&#xa;│   │   ├── UCM_InSight_Priv.txt.&lt;timestamp&gt;&#xa;│   │   └── T_SIEBEL_NOTES.dat.&lt;timestamp&gt;&#xa;│   ├── output/&#xa;│   │   ├── UCM_InSight_Priv.txt.&lt;timestamp&gt;&#xa;│   │   └── T_SIEBEL_NOTES.dat.&lt;timestamp&gt;&#xa;├── Click2Dial/&#xa;│   ├── archive/&#xa;│   │   └── SF_ClickToDial_INS_COMMENTS.dat.&lt;timestamp&gt;&#xa;│   ├── output/&#xa;│   │   └── SF_ClickToDial_INS_COMMENTS.dat.&lt;timestamp&gt;" link="s3://&lt;your-bucket-name&gt;/&#xa;├── FaRetail/&#xa;│   ├── archive/&#xa;│   │   ├── FinAcctCustPubRet.dat.&lt;timestamp&gt;&#xa;│   │   └── ooacctr.dat.&lt;timestamp&gt;&#xa;│   ├── output/&#xa;│   │   ├── FinAcctCustPubRet.dat.&lt;timestamp&gt;&#xa;│   │   └── ooacctr.dat.&lt;timestamp&gt;&#xa;├── FaLease/&#xa;│   ├── archive/&#xa;│   │   ├── FinAcctCustPubLes.dat.&lt;timestamp&gt;&#xa;│   │   └── ooacctl.dat.&lt;timestamp&gt;&#xa;│   ├── output/&#xa;│   │   ├── FinAcctCustPubLes.dat.&lt;timestamp&gt;&#xa;│   │   └── ooacctl.dat.&lt;timestamp&gt;&#xa;├── Insight/&#xa;│   ├── archive/&#xa;│   │   ├── UCM_InSight_Priv.txt.&lt;timestamp&gt;&#xa;│   │   └── T_SIEBEL_NOTES.dat.&lt;timestamp&gt;&#xa;│   ├── output/&#xa;│   │   ├── UCM_InSight_Priv.txt.&lt;timestamp&gt;&#xa;│   │   └── T_SIEBEL_NOTES.dat.&lt;timestamp&gt;&#xa;├── Click2Dial/&#xa;│   ├── archive/&#xa;│   │   └── SF_ClickToDial_INS_COMMENTS.dat.&lt;timestamp&gt;&#xa;│   ├── output/&#xa;│   │   └── SF_ClickToDial_INS_COMMENTS.dat.&lt;timestamp&gt;" id="yM3X1NTKgKoNkWO_Ssvu-348">
+          <mxCell style="text;whiteSpace=wrap;" vertex="1" parent="1">
+            <mxGeometry x="1138.25" y="2960" width="390" height="410" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-349" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#e05243;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.bucket;" vertex="1" parent="1">
+          <mxGeometry x="1032.25" y="2930" width="75" height="78" as="geometry" />
+        </mxCell>
+        <UserObject label="/mnt/data/&#xa;├── FaRetail/&#xa;│   ├── working/&#xa;│   │   ├── FinAcctCustPubRet.dat&#xa;│   │   └── ooacctr.dat&#xa;│   ├── output/&#xa;│   │   ├── FinAcctCustPubRet.dat.&lt;timestamp&gt;&#xa;│   │   └── ooacctr.dat.&lt;timestamp&gt;&#xa;├── FaLease/&#xa;│   ├── working/&#xa;│   │   ├── FinAcctCustPubLes.dat&#xa;│   │   └── ooacctl.dat&#xa;│   ├── output/&#xa;│   │   ├── FaLease/FinAcctCustPubLes.dat.&lt;timestamp&gt;&#xa;│   │   └── ooacctl.dat.&lt;timestamp&gt;&#xa;├── Insight/&#xa;│   ├── working/&#xa;│   │   ├── UCM_InSight_CustUpdate.txt&#xa;│   │   ├── UCM_InSight_Priv.txt&#xa;│   │   └── T_SIEBEL_NOTES.dat&#xa;│   ├── output/&#xa;│   │   ├── UCM_InSight_CustUpdate.txt.&lt;timestamp&gt;&#xa;│   │   ├── UCM_InSight_Priv.txt.&lt;timestamp&gt;&#xa;│   │   └── T_SIEBEL_NOTES.dat.&lt;timestamp&gt;&#xa;├── Click2Dial/&#xa;│   ├── working/&#xa;│   │   └── SF_ClickToDial_INS_COMMENTS.dat&#xa;│   ├── output/&#xa;│   │   └── SF_ClickToDial_INS_COMMENTS.dat.&lt;timestamp&gt;" link="/mnt/data/&#xa;├── FaRetail/&#xa;│   ├── working/&#xa;│   │   ├── FinAcctCustPubRet.dat&#xa;│   │   └── ooacctr.dat&#xa;│   ├── output/&#xa;│   │   ├── FinAcctCustPubRet.dat.&lt;timestamp&gt;&#xa;│   │   └── ooacctr.dat.&lt;timestamp&gt;&#xa;├── FaLease/&#xa;│   ├── working/&#xa;│   │   ├── FinAcctCustPubLes.dat&#xa;│   │   └── ooacctl.dat&#xa;│   ├── output/&#xa;│   │   ├── FaLease/FinAcctCustPubLes.dat.&lt;timestamp&gt;&#xa;│   │   └── ooacctl.dat.&lt;timestamp&gt;&#xa;├── Insight/&#xa;│   ├── working/&#xa;│   │   ├── UCM_InSight_CustUpdate.txt&#xa;│   │   ├── UCM_InSight_Priv.txt&#xa;│   │   └── T_SIEBEL_NOTES.dat&#xa;│   ├── output/&#xa;│   │   ├── UCM_InSight_CustUpdate.txt.&lt;timestamp&gt;&#xa;│   │   ├── UCM_InSight_Priv.txt.&lt;timestamp&gt;&#xa;│   │   └── T_SIEBEL_NOTES.dat.&lt;timestamp&gt;&#xa;├── Click2Dial/&#xa;│   ├── working/&#xa;│   │   └── SF_ClickToDial_INS_COMMENTS.dat&#xa;│   ├── output/&#xa;│   │   └── SF_ClickToDial_INS_COMMENTS.dat.&lt;timestamp&gt;" id="yM3X1NTKgKoNkWO_Ssvu-358">
+          <mxCell style="text;whiteSpace=wrap;" vertex="1" parent="1">
+            <mxGeometry x="29.5" y="2920" width="390" height="440" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-359" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.efs_share;fillColor=#E05243;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-59" y="2900" width="69" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="yM3X1NTKgKoNkWO_Ssvu-360" value="Reference Implementation" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=24;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="-890" y="3550" width="300" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
