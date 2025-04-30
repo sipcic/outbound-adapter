@@ -174,7 +174,7 @@ Placeholder for future functionality where finalized output files will be upload
 The Camel Outbound File Adapter reference implementation, illustrated in the reference architecture figures, demonstrates transactional batching of JMS messages into files using a single, local application instance. Building on this foundation, the production deployment — depicted in the production architecture figures — **adopts a one-pipeline-per-file model** across Kubernetes PODs, while preserving key design principles such as transactional safety, batch integrity, and single-POD Processor deployment for message order. 
 
 ![](images/final-implementation.png)
-<br>*Figure: Production Camel Outbound Adapter Architecture (High-Level View)
+<br> *Figure: Production Camel Outbound Adapter Architecture (High-Level View)*
 
 
 ![](out/architecture-final/architecture-final.png)
