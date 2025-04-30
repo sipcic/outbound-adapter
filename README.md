@@ -118,7 +118,8 @@ The reference implementation is designed to replace the legacy **Tibco Outbound 
 The reference implementation leverages **locally installed components**, including an embedded ActiveMQ broker and a local file system folder structure, as depicted in the following figure.
 
 ![](images/reference-implementation.png)
-<br>*Figure: Camel Outbound File Adapter – Reference Implementation*
+
+*Figure: Camel Outbound File Adapter – Reference Implementation*
 
 Apache Camel orchestrates routing, transformation, and fault tolerance, while Spring Boot provides the runtime infrastructure and configuration management.
 
@@ -136,7 +137,8 @@ The `EofPublisherRoute` component is a Camel route that uses the Apache Camel **
 The Reference Implementation consolidates all processing into a **single application deployed on a local machine**. It replaces the Tibco File Adapter by handling message transformation, batching, validation, and error logging using a Spring Boot and Apache Camel application.
 
 ![](out/architecture-mac/architecture-mac.png)
-<br>*Figure: Camel Outbound File Adapter Architecture*
+
+*Figure: Camel Outbound File Adapter Architecture*
 
 The following section offers a brief overview of the components; refer to the associated repositories for detailed implementation information.
 
@@ -174,11 +176,13 @@ Placeholder for future functionality where finalized output files will be upload
 The Camel Outbound File Adapter reference implementation, illustrated in the reference architecture figures, demonstrates transactional batching of JMS messages into files using a single, local application instance. Building on this foundation, the production deployment — depicted in the production architecture figures — **adopts a one-pipeline-per-file model** across Kubernetes PODs, while preserving key design principles such as transactional safety, batch integrity, and single-POD Processor deployment for message order. 
 
 ![](images/final-implementation.png)
-<br> *Figure: Production Camel Outbound Adapter Architecture (High-Level View)*
+
+*Figure: Production Camel Outbound Adapter Architecture (High-Level View)*
 
 
 ![](out/architecture-final/architecture-final.png)
-<br>*Figure: Production Camel Outbound Adapter Architecture (Component View)*
+
+*Figure: Production Camel Outbound Adapter Architecture (Component View)*
 
 The following sections outline the detailed changes required across `Scheduler`, `Processor`, `EFS Storage`, C`ronJob Scheduler`, and Deployment Strategies to achieve this production-ready architecture.
 
@@ -244,7 +248,8 @@ The following sections outline the detailed changes required across `Scheduler`,
 The **8×3 model** represents a fully decoupled deployment approach where each file-specific pipeline includes its dedicated `Scheduler`, `Processor`, and `CronJob Scheduler` components. This results in a total of **24 deployments** (8 files × 3 components), each operating independently. 
 
 ![](out/deployment-packaging-24/deployment-packaging-24.png)
-<br>Figure: 8x3 Model Deployment Stratrgy 
+
+*Figure: 8x3 Model Deployment Stratrgy* 
 
 <br>
 
