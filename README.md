@@ -36,10 +36,10 @@ The design and implementation details of the Camel Outbound Adapter are document
 ---
 | Repository           | Description                                               | Status         |
 |----------------------|-----------------------------------------------------------|----------------|
-| outbound-adapter     | Main entry point that orchestrates all outbound flow.     | 🟢 Start here   |
-| outbound-requirements| Functional and technical requirements documentation.      | 📄 Requirements |
-| outbound-scheduler   | Publishes EOF signals to trigger batch finalization.      | ⏰ Scheduler    |
-| outbound-processor   | Transforms and writes JMS messages to files.              | 🛠️ Processor    |
+|[outbound-adapter](https://github.com/sipcic/outbound-adapter)   | Main entry point that orchestrates all outbound flow.     | 🟢 Start here   |
+| [outbound-requirements](https://github.com/sipcic/outbound-requirements)| Functional and technical requirements documentation.      | 📄 Requirements |
+| [outbound-scheduler](https://github.com/sipcic/outbound-scheduler)   | Publishes EOF signals to trigger batch finalization.      | ⏰ Scheduler    |
+| [outbound-processor](https://github.com/sipcic/outbound-processor) | Transforms and writes JMS messages to files.              | 🛠️ Processor    |
 ---
 **Tip:** Use this table from any repo to find your way back to the main flow or explore related modules.
 
