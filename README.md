@@ -124,7 +124,7 @@ The reference implementation leverages **locally installed components**, includi
 Apache Camel orchestrates routing, transformation, and fault tolerance, while Spring Boot provides the runtime infrastructure and configuration management.
 
 
-## 3.2 Component Overview
+## 3.2 Component Overviews
 
 The Camel reference implementation replicates and enhances the Tibco Adapter's key responsibilities through two primary components: `Scheduler` and `Processor`.
 
