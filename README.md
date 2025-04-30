@@ -6,14 +6,13 @@
    - [2.2 Adapter Files and EMS Queues](#22-adapter-files-and-ems-queues)
 3. [Camel File Adapter – Reference Implementation](#3-camel-file-adapter---reference-implementation)
    - [3.1 Architecture](#31-architecture)
-   - [3.2 Repository References](#32-repository-references)
-   - [3.3 Component Overview](#33-component-overview)
-     - [3.3.1 Scheduler](#331-scheduler)
-     - [3.3.2 Processor](#332-processor)
-       - [3.3.2.1 Messaging Layer](#3321-messaging-layer)
-       - [3.3.2.2 Processing Application (Single Local Processor)](#3322-processing-application-single-local-processor)
-       - [3.3.2.3Storage Layer (Local File System)](#3323storage-layer-local-file-system)
-       - [3.3.2.4 Archival](#3324-archival)
+   - [3.2 Component Overview](#32-component-overview)
+     - [3.2.1 Scheduler](#321-scheduler)
+     - [3.2.2 Processor](#322-processor)
+       - [3.2.2.1 Messaging Layer](#3221-messaging-layer)
+       - [3.2.2.2 Processing Application (Single Local Processor)](#3222-processing-application-single-local-processor)
+       - [3.2.2.3Storage Layer (Local File System)](#3223storage-layer-local-file-system)
+       - [3.2.2.4 Archival](#3224-archival)
 4. [Deploying Reference Implementation to Production](#4-deploying-reference-implementation-to-production)
    - [4.1 Architecture](#41-architecture)
    - [4.2 Changes](#42-changes)
@@ -29,6 +28,21 @@
 # 1. Outbound File Adapter 
 
 This document consolidates the design and evolution of the Outbound File Adapter replacement initiative. It introduces the current Tibco outbound file adapter solution, outlines the reference implementation based on Apache Camel, and documents the final production-grade implementation, highlighting the necessary architectural and deployment changes.
+
+**Repository References**
+
+The design and implementation details of the Camel Outbound Adapter are documented across the following repositories:
+
+---
+| Repository           | Description                                               | Status         |
+|----------------------|-----------------------------------------------------------|----------------|
+| outbound-adapter     | Main entry point that orchestrates all outbound flow.     | 🟢 Start here   |
+| outbound-requirements| Functional and technical requirements documentation.      | 📄 Requirements |
+| outbound-scheduler   | Publishes EOF signals to trigger batch finalization.      | ⏰ Scheduler    |
+| outbound-processor   | Transforms and writes JMS messages to files.              | 🛠️ Processor    |
+---
+**Tip:** Use this table from any repo to find your way back to the main flow or explore related modules.
+
 
 # 2. Problem Statement - Tibco Outbound File Adapter
 
@@ -108,29 +122,16 @@ The reference implementation leverages **locally installed components**, includi
 
 Apache Camel orchestrates routing, transformation, and fault tolerance, while Spring Boot provides the runtime infrastructure and configuration management.
 
-## 3.2 Repository References
 
-The components of the reference design and implementation are detailed across the following repositories:
-
----
-| Repository           | Description                                               | Status         |
-|----------------------|-----------------------------------------------------------|----------------|
-| outbound-adapter     | Main entry point that orchestrates all outbound flow.     | 🟢 Start here   |
-| outbound-requirements| Functional and technical requirements documentation.      | 📄 Requirements |
-| outbound-scheduler   | Publishes EOF signals to trigger batch finalization.      | ⏰ Scheduler    |
-| outbound-processor   | Transforms and writes JMS messages to files.              | 🛠️ Processor    |
----
-**Tip:** Use this table from any repo to find your way back to the main flow or explore related modules.
-
-## 3.3 Component Overview
+## 3.2 Component Overview
 
 The Camel reference implementation replicates and enhances the Tibco Adapter's key responsibilities through two primary components: `Scheduler` and `Processor`.
 
-### 3.3.1 Scheduler
+### 3.2.1 Scheduler
 
 The `EofPublisherRoute` component is a Camel route that uses the Apache Camel **Timer component** to periodically (hardcoded - every 60 seconds) generate and publish an `EOF` (End-of-File) XML marker to the `input.queue` on `ActiveMQ,` signaling the batch closure event for downstream processing.
 
-### 3.3.2 Processor
+### 3.2.2 Processor
 
 The Reference Implementation consolidates all processing into a **single application deployed on a local machine**. It replaces the Tibco File Adapter by handling message transformation, batching, validation, and error logging using a Spring Boot and Apache Camel application.
 
@@ -139,14 +140,14 @@ The Reference Implementation consolidates all processing into a **single applica
 
 The following section offers a brief overview of the components; refer to the associated repositories for detailed implementation information.
 
-#### 3.3.2.1 Messaging Layer
+#### 3.2.2.1 Messaging Layer
 
  - **JMS Queue:** Acts as the inbound message buffer.
 
     - **Producer** sends regular XML messages to the queue.
     - **Scheduler** sends scheduled EOF (End-of-File) markers to the same queue to trigger batch finalization.
 
-#### 3.3.2.2 Processing Application (Single Local Processor)
+#### 3.2.2.2 Processing Application (Single Local Processor)
 
  - **Apache Camel Route:** Orchestrates the end-to-end flow, coordinating message transformation, validation, error handling, and batch rotation.
 
@@ -155,13 +156,13 @@ The following section offers a brief overview of the components; refer to the as
  - **Batch Validator:** Tracks the number of successfully processed messages, ensuring message integrity by comparing counts at EOF.
  - **EOF Handler:** Detects EOF signals, closes the current working file, moves it to the output directory with a timestamped name, and triggers final validation.
 
-#### 3.3.2.3Storage Layer (Local File System)
+#### 3.2.2.3Storage Layer (Local File System)
 
  - **Working File** (`/working`): Open file where transformed CSV rows are appended during batch processing.
  - **Exception File** (`/exception`): Directory where failed messages and error details are stored.
  - **Output File** (`/output`): Directory where finalized, timestamped batch files are moved after successful batch closure.
 
-#### 3.3.2.4 Archival
+#### 3.2.2.4 Archival
 
  - S3 Bucket (Planned, Not Implemented in the Reference Implementation): <br>
 Placeholder for future functionality where finalized output files will be uploaded to Amazon S3.
@@ -174,6 +175,7 @@ The Camel Outbound File Adapter reference implementation, illustrated in the ref
 
 ![](images/final-implementation.png)
 <br>*Figure: Production Camel Outbound Adapter Architecture (High-Level View)
+
 
 ![](out/architecture-final/architecture-final.png)
 <br>*Figure: Production Camel Outbound Adapter Architecture (Component View)*
